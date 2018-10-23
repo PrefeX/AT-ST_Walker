@@ -44,8 +44,27 @@ public class WalkerFoot implements Runnable {
     }
 
     private void walk() {
+        for (int x = 0; x < 5; x++) {
+            if (this.foot.equals(Foot.Left)) {
+                for (int y = 0; y < 4; y++) {
+                    if (Constants.pattern[x][y] == 1){
+                        System.out.println("Engine nr. " + y);
+                    }
+                    
+                }
 
-        System.out.println(this.foot + "  foot walking");
+            }
+            if (this.foot.equals(Foot.Right)) {
+                for (int y = 4; y < 8; y++) {
+                    if (Constants.pattern[x][y] == 1){
+                        System.out.println("Engine nr. " + y);
+                    }
+                    
+                }
+
+            }
+
+        }
     }
 
 }
