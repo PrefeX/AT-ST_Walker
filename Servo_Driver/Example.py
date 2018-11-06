@@ -1,5 +1,8 @@
 # Simple demo of of the PCA9685 PWM servo/LED controller library.
 # This will move channel 0 from min to max position repeatedly.
+
+
+# install with sudo pip install adafruit-pca9685
 # Author: Tony DiCola
 # License: Public Domain
 from __future__ import division
