@@ -11,13 +11,20 @@ import java.util.ArrayList;
  *
  * @author andreas
  */
-public class Feet {
+public class Feet implements Runnable{
     private String side;
     private ArrayList<Servo> servos;
 
     public Feet(String side, ArrayList<Servo> servos) {
         this.side = side;
         this.servos = servos;
+    }
+
+    @Override
+    public void run() {
+        while (Constants.walking) {            
+            
+        }
     }
     
 }

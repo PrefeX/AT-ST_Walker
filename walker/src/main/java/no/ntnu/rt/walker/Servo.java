@@ -5,23 +5,40 @@
  */
 package no.ntnu.rt.walker;
 
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.PrintWriter;
+import java.net.InetAddress;
+import java.net.Socket;
+
 /**
  *
  * @author andreas
  */
-public class Servo {
-    private int orientation;
+public class Servo{
+    
+    //Current andle of the servo
+    private int angle;
+    
+    private Socket socket;
+    private PrintWriter out;
 
-    public Servo() {
-        this.orientation = 0;
+    public Servo() throws IOException {
+        this.socket = new Socket(Constants.serverAddress, Constants.port);
+        OutputStream outputstream = socket.getOutputStream();
+        out = new PrintWriter(outputstream);
+        this.angle = 0;
     }
 
-    public int getOrientation() {
-        return orientation;
+    public int getAngle() {
+        return angle;
     }
 
-    public void setOrientation(int orientation) {
-        this.orientation = orientation;
+    public void move(int angle) {
+        out.print(angle);
+        this.angle = angle;
+        
+        
     }
     
     
