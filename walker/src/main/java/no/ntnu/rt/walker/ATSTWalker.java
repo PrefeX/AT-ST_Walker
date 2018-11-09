@@ -15,7 +15,7 @@ class Walker {
     
     
     public Walker() {
-        left = new WalkerFoot(WalkerFoot.Foot.Left);
+        left = new Feet("left", Constants.ports);
         right = new WalkerFoot(WalkerFoot.Foot.Right);
         left.start();
         right.start();

@@ -6,6 +6,7 @@
 package no.ntnu.rt.walker;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -13,9 +14,9 @@ import java.util.ArrayList;
  */
 public class Feet implements Runnable{
     private String side;
-    private ArrayList<Servo> servos;
+    private List<Integer> servos;
 
-    public Feet(String side, ArrayList<Servo> servos) {
+    public Feet(String side, List<Integer> servos) {
         this.side = side;
         this.servos = servos;
     }

@@ -5,6 +5,10 @@
  */
 package no.ntnu.rt.walker;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  *
  * @author andreas
@@ -12,5 +16,7 @@ package no.ntnu.rt.walker;
 public class Constants {
     public static boolean walking = true;
     public static String serverAddress = "localhost";
-    public static int port = 8001;
+    public static int port = 8011 - 13;
+    public static List<Integer> ports = Arrays.asList(8011, 8012, 8013);
+    
 }
