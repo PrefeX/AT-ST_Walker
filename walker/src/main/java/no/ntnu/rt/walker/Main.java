@@ -5,12 +5,14 @@
  */
 package no.ntnu.rt.walker;
 
+import java.io.IOException;
+
 /**
  *
  * @author andreas
  */
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Walker walker = new Walker();
         walker.walk();
     }

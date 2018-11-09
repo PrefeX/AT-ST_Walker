@@ -5,6 +5,8 @@
  */
 package no.ntnu.rt.walker;
 
+import java.io.IOException;
+
 /**
  *
  * @author andreas
@@ -12,19 +14,21 @@ package no.ntnu.rt.walker;
 class Walker {
     private Feet left;
     private Feet right;
+    Thread lefFoot;
     
     
-    public Walker() {
+    public Walker() throws IOException {
         left = new Feet("left");
         //right = new Feet(WalkerFoot.Foot.Right);
-        Thread leftFoot = new Thread(left);
-        leftFoot.start();
+        lefFoot = new Thread(left);
+        
         //right.start();
     }
 
     
     public boolean walk() {
-        return false;
+        lefFoot.start();
+        return true;
     }
     
 }
