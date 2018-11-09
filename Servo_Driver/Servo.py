@@ -37,7 +37,7 @@ if __name__ == '__main__':
     for i in range(6):
         port = 8011 + i
         servos.append(Servo(port))
-        servos[i].setName("Servo " + i)
+        servos[i].setName("Servo " + str(i))
 
     for i in len(servos) - 1:
         servos[i].start()
