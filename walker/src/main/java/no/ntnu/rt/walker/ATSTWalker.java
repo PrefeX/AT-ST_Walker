@@ -10,15 +10,16 @@ package no.ntnu.rt.walker;
  * @author andreas
  */
 class Walker {
-    private WalkerFoot left;
-    private WalkerFoot right;
+    private Feet left;
+    private Feet right;
     
     
     public Walker() {
-        left = new Feet("left", Constants.ports);
-        right = new WalkerFoot(WalkerFoot.Foot.Right);
-        left.start();
-        right.start();
+        left = new Feet("left");
+        //right = new Feet(WalkerFoot.Foot.Right);
+        Thread leftFoot = new Thread(left);
+        leftFoot.start();
+        //right.start();
     }
 
     

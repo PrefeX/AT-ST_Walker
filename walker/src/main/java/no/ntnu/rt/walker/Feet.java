@@ -16,10 +16,13 @@ public class Feet implements Runnable{
     private String side;
     private List<Integer> servos;
 
-    public Feet(String side, List<Integer> servos) {
+    public Feet(String side) {
+        
         this.side = side;
-        this.servos = servos;
+        this.servos = Constants.ports;
     }
+
+
 
     @Override
     public void run() {
@@ -27,5 +30,6 @@ public class Feet implements Runnable{
             
         }
     }
+
     
 }
