@@ -39,6 +39,6 @@ if __name__ == '__main__':
         servos[i] = Servo(port)
         servos[i].setName("Servo " + i)
 
-    for i in len(servos):
+    for i in len(servos) - 1:
         servos[i].start()
 
