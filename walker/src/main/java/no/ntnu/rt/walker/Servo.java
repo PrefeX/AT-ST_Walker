@@ -15,19 +15,22 @@ import java.net.Socket;
  *
  * @author andreas
  */
-public class Servo{
+public class Servo implements Runnable{
     
     //Current andle of the servo
     private int angle;
     
     private Socket socket;
     private PrintWriter out;
+    private int port;
 
-    public Servo() throws IOException {
-        this.socket = new Socket(Constants.serverAddress, Constants.port);
+    public Servo(int port) throws IOException {
+        this.port = port;
+        this.socket = new Socket(Constants.serverAddress, this.port);
         OutputStream outputstream = socket.getOutputStream();
         out = new PrintWriter(outputstream);
         this.angle = 0;
+        
     }
 
     public int getAngle() {
@@ -37,8 +40,16 @@ public class Servo{
     public void move(int angle) {
         out.print(angle);
         this.angle = angle;
+        System.out.println("Angle of"+ this.port +"is" + angle);
         
         
+    }
+
+    @Override
+    public void run() {
+        while (Constants.walking){
+            move(110);
+        }
     }
     
     
