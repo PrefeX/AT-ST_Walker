@@ -9,13 +9,14 @@ from adafruit_motor import servo
 
 
 class Servo(Thread):
-    def __init__(self, port):
+    def __init__(self, port, channel):
+        self.channel = channel
         self.port = port
         Thread.__init__(self)
         i2c = busio.I2C(SCL, SDA)
         pca = PCA9685(i2c)
         pca.frequency = 50
-        self.servo1 = servo.Servo(pca.channels[1])
+        self.servo1 = servo.Servo(pca.channels[channel])
 
     def run(self):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -38,7 +39,8 @@ if __name__ == '__main__':
     servos = []
     for i in range(6):
         port = 8011 + i
-        servos.append(Servo(port))
+        channel = i
+        servos.append(Servo(port=port, channel=channel))
         servos[i].setName("Servo " + str(i))
 
     for i in range(len(servos) - 1):
