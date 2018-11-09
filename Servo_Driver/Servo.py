@@ -21,15 +21,17 @@ class Servo(Thread):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         try:
             s.bind(("127.0.0.1", self.port))
+            s.listen(10)
         except socket.error as msg:
             print("bind failed", msg)
-            s.listen(10)
-        while(Constants.walking):
+
+        while Constants.walking:
 
             connection, address = s.accept()
             print("Connected with" , address[0], ":", str(address[1]))
             print(connection.recv(1024))
-            self.servo1.angle = connection.recv(1024)
+
+            #self.servo1.angle = connection.recv(1024)
 
 
 if __name__ == '__main__':
