@@ -40,13 +40,14 @@ public class Servo implements Runnable {
     }
 
     public synchronized void move(int angle) {
-        out.print("" + angle);
+        byte bAngle = (byte) angle;
+        out.print(bAngle);
         this.angle = angle;
-        System.out.println("Angle of" + this.port + "is" + angle);
+        System.out.println("Angle of " + this.port + " is " + angle);
         try {
-            this.wait();
+        this.wait();
         } catch (InterruptedException ex) {
-            Logger.getLogger(Servo.class.getName()).log(Level.SEVERE, null, ex);
+        Logger.getLogger(Servo.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
@@ -55,8 +56,7 @@ public class Servo implements Runnable {
     public void run() {
         while (Constants.walking) {
             move(110);
-
-        }
+                    }
     }
 
 }
