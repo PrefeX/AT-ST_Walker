@@ -21,6 +21,7 @@ class Walker {
         left = new Feet("left");
         //right = new Feet(WalkerFoot.Foot.Right);
         lefFoot = new Thread(left);
+
         
         //right.start();
     }

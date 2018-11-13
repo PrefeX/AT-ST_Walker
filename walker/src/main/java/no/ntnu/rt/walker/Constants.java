@@ -15,8 +15,9 @@ import java.util.List;
  */
 public class Constants {
     public static boolean walking = true;
-    public static String serverAddress = "localhost";
-    public static int port = 8011 - 13;
-    public static List<Integer> ports = Arrays.asList(8011, 8012, 8013);
+    public static String serverAddress = "158.38.140.203";
+    public static List<Integer> ports;
+    
+    
     
 }

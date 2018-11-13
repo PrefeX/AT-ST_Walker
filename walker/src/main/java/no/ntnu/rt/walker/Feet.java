@@ -15,15 +15,20 @@ import java.util.List;
  */
 public class Feet implements Runnable{
     private String side;
-    private List<Integer> ports;
     private ArrayList<Servo> servos;
     private ArrayList<Thread> threads;
-
+    private ArrayList<Integer> ports;
     public Feet(String side) throws IOException {
-        
+        ports = new ArrayList<>();
+        servos = new ArrayList<>();
+        threads = new ArrayList<>();
+        ports.add(8011);
+        ports.add(8012);
+        ports.add(8013);
         this.side = side;
-        this.ports = Constants.ports;
-        for (Integer port : ports) {
+
+        for (Integer port : this.ports) {
+            System.out.println(port);
             this.servos.add(new Servo(port));
         }
     }

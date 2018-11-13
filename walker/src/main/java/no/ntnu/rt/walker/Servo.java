@@ -10,16 +10,18 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.InetAddress;
 import java.net.Socket;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author andreas
  */
-public class Servo implements Runnable{
-    
+public class Servo implements Runnable {
+
     //Current andle of the servo
     private int angle;
-    
+
     private Socket socket;
     private PrintWriter out;
     private int port;
@@ -30,27 +32,31 @@ public class Servo implements Runnable{
         OutputStream outputstream = socket.getOutputStream();
         out = new PrintWriter(outputstream);
         this.angle = 0;
-        
+
     }
 
     public int getAngle() {
         return angle;
     }
 
-    public void move(int angle) {
-        out.print(angle);
+    public synchronized void move(int angle) {
+        out.print("" + angle);
         this.angle = angle;
-        System.out.println("Angle of"+ this.port +"is" + angle);
-        
-        
+        System.out.println("Angle of" + this.port + "is" + angle);
+        try {
+            this.wait();
+        } catch (InterruptedException ex) {
+            Logger.getLogger(Servo.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }
 
     @Override
     public void run() {
-        while (Constants.walking){
+        while (Constants.walking) {
             move(110);
+
         }
     }
-    
-    
+
 }
