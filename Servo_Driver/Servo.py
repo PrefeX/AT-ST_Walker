@@ -29,10 +29,11 @@ class Servo(Thread):
         while Constants.walking:
 
             connection, address = s.accept()
+            angleFromJava = int(connection.recv(1024))
             print("Connected with" , address[0], ":", str(address[1]))
-            print(connection.recv(1024))
+            print(angleFromJava)
 
-            #self.servo1.angle = connection.recv(1024)
+            self.servo1.angle = angleFromJava
 
 
 if __name__ == '__main__':
