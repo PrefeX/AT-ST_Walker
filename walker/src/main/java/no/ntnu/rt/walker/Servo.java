@@ -25,12 +25,16 @@ public class Servo implements Runnable {
     private Socket socket;
     private PrintWriter out;
     private int port;
+    private String side;
+    private int servoNumber;
 
-    public Servo(int port) throws IOException {
+    public Servo(int port, String side, int servoNumber) throws IOException {
         this.port = port;
+        this.side = side;
+        this.servoNumber = servoNumber;
         this.socket = new Socket(Constants.serverAddress, this.port);
         OutputStream outputstream = socket.getOutputStream();
-        out = new PrintWriter(outputstream);
+        out = new PrintWriter(outputstream, false);
         this.angle = 0;
 
     }
@@ -39,24 +43,34 @@ public class Servo implements Runnable {
         return angle;
     }
 
-    public synchronized void move(int angle) {
+    public void move(int angle) {
         byte bAngle = (byte) angle;
-        out.print(bAngle);
+        out.print("" + angle);
+        out.flush();
         this.angle = angle;
         System.out.println("Angle of " + this.port + " is " + angle);
-        try {
+        /*try {
         this.wait();
         } catch (InterruptedException ex) {
         Logger.getLogger(Servo.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        }*/
 
     }
 
     @Override
     public void run() {
         while (Constants.walking) {
-            move(110);
-                    }
+            if (this.side.equalsIgnoreCase("left")) {
+                System.out.println("some}hing");
+                move(LeftFeet.angles.get(servoNumber));
+
+            } else {
+                System.out.println("something else");
+                move(RightFeet.angles.get(servoNumber));
+
+            }
+
+        }
     }
 
 }

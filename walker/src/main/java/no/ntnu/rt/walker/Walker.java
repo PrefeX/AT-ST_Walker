@@ -12,23 +12,26 @@ import java.io.IOException;
  * @author andreas
  */
 class Walker {
-    private Feet left;
-    private Feet right;
-    Thread lefFoot;
+    private final LeftFeet left;
+    private final RightFeet right;
+    Thread leftFoot;
+    Thread rightFoot;
     
     
     public Walker() throws IOException {
-        left = new Feet("left");
-        //right = new Feet(WalkerFoot.Foot.Right);
-        lefFoot = new Thread(left);
-
+        left = new LeftFeet("left");
+        right = new RightFeet("right");
+        leftFoot = new Thread(left);
+        rightFoot = new Thread(right);
         
-        //right.start();
     }
 
     
     public boolean walk() {
-        lefFoot.start();
+        System.out.println("walking");
+        leftFoot.start();
+        rightFoot.start();
+        
         return true;
     }
     
