@@ -23,7 +23,7 @@ public class RightFeet implements Runnable {
 
     public RightFeet(String side) throws IOException {
         RightFeet.angles = new AtomicIntegerArray(4);
-        Integer[] pattern = Constants.sitPartlyDown;
+        Integer[] pattern = Constants.rightFootInit;
         setServos(pattern);
         this.ports = new ArrayList<>();
         this.servos = new ArrayList<>();
@@ -56,6 +56,18 @@ public class RightFeet implements Runnable {
                 case 0:
                     {
                         Integer[] pattern = Constants.rightFootInit;
+                        setServos(pattern);
+                        break;
+                    }
+                case 1:
+                    {
+                        Integer[] pattern = Constants.rightFootInit;
+                        setServos(pattern);
+                        break;
+                    }
+                case 2:
+                    {
+                        Integer[] pattern = Constants.leftFootWalk0;
                         setServos(pattern);
                         break;
                     }

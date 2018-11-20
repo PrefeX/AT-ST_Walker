@@ -28,17 +28,14 @@ class Walker {
     }
 
     public boolean walk() throws InterruptedException {
-        Constants.state = new AtomicInteger(5);
+        Constants.state = new AtomicInteger(0);
         leftFoot.start();
         rightFoot.start();
-        
-
-        
-        
-        Thread.sleep(10000);
         Constants.state = new AtomicInteger(0);
-        /*Thread.sleep(2000);
-        Constants.state = new AtomicInteger(0);*/
+        Thread.sleep(2000);
+        Constants.state = new AtomicInteger(1);
+        Thread.sleep(2000);
+        Constants.state = new AtomicInteger(2);
         
         return true;
     }
