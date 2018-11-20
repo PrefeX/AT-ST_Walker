@@ -16,12 +16,12 @@ class Servo(Thread):
         i2c = busio.I2C(SCL, SDA)
         pca = PCA9685(i2c)
         pca.frequency = 50
-        self.servo1 = servo.Servo(pca.channels[channel])
+        self.servo1 = servo.Servo(pca.channels[0], min_pulse=500, max_pulse=2000)
 
     def run(self):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         try:
-            s.bind(("158.38.140.203", self.port))
+            s.bind(("0.0.0.0", self.port))
             s.listen(10)
         except socket.error as msg:
             print("bind failed", msg)
@@ -39,7 +39,7 @@ class Servo(Thread):
 
 if __name__ == '__main__':
     servos = []
-    for i in range(6):
+    for i in range(8):
         port = 8011 + i
         channel = i
         servos.append(Servo(port=port, channel=channel))
