@@ -7,6 +7,7 @@ package no.ntnu.rt.walker;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicIntegerArray;
 
 /**
@@ -20,16 +21,16 @@ public class LeftFeet implements Runnable {
     private final ArrayList<Thread> threads;
     private final ArrayList<Integer> ports;
     public static AtomicIntegerArray angles;
+    public WalkCalc walk;
+
+    boolean recursive = true;
 
     public LeftFeet(String side) throws IOException {
         LeftFeet.angles = new AtomicIntegerArray(4);
         this.ports = new ArrayList<>();
         this.servos = new ArrayList<>();
         this.threads = new ArrayList<>();
-        this.ports.add(8011);
-        this.ports.add(8012);
-        this.ports.add(8013);
-        this.ports.add(8014);
+        this.ports.addAll(Arrays.asList(Constants.leftFootPorts));
         this.side = side;
         int i = 0;
         for (Integer port : this.ports) {
@@ -42,11 +43,6 @@ public class LeftFeet implements Runnable {
 
     @Override
     public void run() {
-        System.out.println("starting left");
-        if (Constants.state.equals(0)) {
-            Integer[] pattern = Constants.leftFootInit;
-            setServos(pattern);
-        }
         servos.forEach((servo) -> {
             this.threads.add(new Thread(servo));
         });
@@ -54,9 +50,38 @@ public class LeftFeet implements Runnable {
             thread.start();
         });
         while (Constants.walking) {
-            if (Constants.state.equals(0)) {
-                Integer[] pattern = Constants.leftFootInit;
-                setServos(pattern);
+            Integer state = Constants.state.get();
+            switch (state) {
+                case 0: {
+                    Integer[] pattern = Constants.leftFootInit;
+                    setServos(pattern);
+                    break;
+                }
+                case 1: {
+                    Integer[] pattern = Constants.leftFootWalk0;
+                    setServos(pattern);
+                    break;
+                }
+                case 2: {
+                    Integer[] pattern = Constants.leftFootWalk0;
+                    setServos(pattern);
+                    break;
+                }
+                case 3: {
+                    int step = 1;
+
+                    while (step <= 40) {
+                        Integer[] pattern = walk.Walk(step, recursive);
+                        setServos(pattern);
+                    }
+                    recursive = !recursive;
+                    break;
+                }
+                case 5:
+                    setServos(Constants.sitPartlyDown);
+                    break;
+                default:
+                    break;
             }
         }
     }

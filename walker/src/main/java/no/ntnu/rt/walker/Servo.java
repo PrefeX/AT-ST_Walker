@@ -44,16 +44,12 @@ public class Servo implements Runnable {
     }
 
     public void move(int angle) {
+        //System.out.println(angle);
         byte bAngle = (byte) angle;
         out.print("" + angle);
         out.flush();
         this.angle = angle;
         System.out.println("Angle of " + this.port + " is " + angle);
-        /*try {
-        this.wait();
-        } catch (InterruptedException ex) {
-        Logger.getLogger(Servo.class.getName()).log(Level.SEVERE, null, ex);
-        }*/
 
     }
 
@@ -61,15 +57,18 @@ public class Servo implements Runnable {
     public void run() {
         while (Constants.walking) {
             if (this.side.equalsIgnoreCase("left")) {
-                System.out.println("some}hing");
+                //System.out.println(LeftFeet.angles.get(servoNumber));
                 move(LeftFeet.angles.get(servoNumber));
 
             } else {
-                System.out.println("something else");
                 move(RightFeet.angles.get(servoNumber));
 
             }
-
+            try {
+                Thread.sleep(20);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Servo.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }
 

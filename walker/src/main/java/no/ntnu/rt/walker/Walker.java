@@ -6,33 +6,38 @@
 package no.ntnu.rt.walker;
 
 import java.io.IOException;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  *
  * @author andreas
  */
 class Walker {
+
     private final LeftFeet left;
     private final RightFeet right;
     Thread leftFoot;
     Thread rightFoot;
-    
-    
+
     public Walker() throws IOException {
         left = new LeftFeet("left");
         right = new RightFeet("right");
         leftFoot = new Thread(left);
         rightFoot = new Thread(right);
-        
+
     }
 
-    
-    public boolean walk() {
-        System.out.println("walking");
+    public boolean walk() throws InterruptedException {
+        Constants.state = new AtomicInteger(0);
         leftFoot.start();
         rightFoot.start();
+
+        Thread.sleep(2000);
+        Constants.state = new AtomicInteger(3);
+        System.out.println("State is now: "+ Constants.state);
+        
         
         return true;
     }
-    
+
 }
