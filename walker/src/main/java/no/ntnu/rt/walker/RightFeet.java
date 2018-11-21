@@ -7,6 +7,7 @@ package no.ntnu.rt.walker;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicIntegerArray;
 
 /**
@@ -23,15 +24,10 @@ public class RightFeet implements Runnable {
 
     public RightFeet(String side) throws IOException {
         RightFeet.angles = new AtomicIntegerArray(4);
-        Integer[] pattern = Constants.rightFootInit;
-        setServos(pattern);
         this.ports = new ArrayList<>();
         this.servos = new ArrayList<>();
         this.threads = new ArrayList<>();
-        this.ports.add(8015);
-        this.ports.add(8016);
-        this.ports.add(8017);
-        this.ports.add(8018);
+        this.ports.addAll(Arrays.asList(Constants.rightFootPorts));
         this.side = side;
         int i = 0;
         for (Integer port : this.ports) {
