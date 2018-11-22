@@ -20,6 +20,8 @@ public class Constants {
     public static volatile Integer[] currentFootStateRight = new Integer[]{37, 40, 100, 68};
         public static Integer[] WalkL = new Integer[]{37, 40, 100, 68};
 
+    // Gyroscope data
+    public static volatile float[] gyro = new float[]{0,0,0};
     
     
     // Rasmus leker seg
