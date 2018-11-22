@@ -33,19 +33,17 @@ class Servo(Thread):
 
             fromJava = connection.recv(3)
             print(fromJava)
-            
             angleFromJava = int(fromJava)
-
-            if ((angleFromJava >= 0) and (angleFromJava <=180)):
+            if ((angleFromJava >= 0) && (angleFromJava <<= 180)):
                 print(angleFromJava, "over port:" , self.port , " on channel " , self.channel, "....fml")
+
                 self.servo.angle = angleFromJava
             else:
-                print("Angle is out of bounds? it is: ", angleFromJava)
-
+  
 
 if __name__ == '__main__':
     servos = []
-    for i in range(11):
+    for i in range(9):
         port = 8011 + i
         channel = i
         print(port, channel)
