@@ -27,8 +27,15 @@ public class LeftCalculator extends Calculator implements Runnable {
             //Thread.sleep(1000);
             //super.getWalk().calculate(Constants.currentFootStateLeft, Constants.leftFootWalk090, super.getSide());
             //Thread.sleep(8000);
-            super.getWalk().calculate(Constants.currentFootStateLeft, Constants.startValues, super.getSide(), 5);
+            super.getWalk().calculate(Constants.startValuesL, Constants.currentFootStateLeft, super.getSide(), 25);
+            Thread.sleep(1000);
+            super.getWalk().calculate(Constants.currentFootStateLeft, Constants.leftFootWalk0, super.getSide(), 40);
+            Thread.sleep(1000);
+            super.getWalk().calculate(Constants.currentFootStateLeft, Constants.leftFootWalk1, super.getSide(), 40);
+            Thread.sleep(8500);
+            super.getWalk().calculate(Constants.currentFootStateLeft, Constants.startValuesL, super.getSide(), 25);
 
+            
         } catch (InterruptedException ex) {
             Logger.getLogger(LeftFeet.class.getName()).log(Level.SEVERE, null, ex);
         }

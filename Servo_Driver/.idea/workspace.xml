@@ -1,77 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8fac2632-d3b0-4f08-a7a3-2a4caafa73a7" name="Default Changelist" comment="" />
+    <list default="true" id="8fac2632-d3b0-4f08-a7a3-2a4caafa73a7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../walker/src/main/java/no/ntnu/rt/walker/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/../walker/src/main/java/no/ntnu/rt/walker/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../walker/src/main/java/no/ntnu/rt/walker/LeftCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../walker/src/main/java/no/ntnu/rt/walker/LeftCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../walker/src/main/java/no/ntnu/rt/walker/RightCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../walker/src/main/java/no/ntnu/rt/walker/RightCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../walker/src/main/java/no/ntnu/rt/walker/RightFeet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../walker/src/main/java/no/ntnu/rt/walker/RightFeet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../walker/src/main/java/no/ntnu/rt/walker/Servo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../walker/src/main/java/no/ntnu/rt/walker/Servo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../walker/target/classes/no/ntnu/rt/walker/Servo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../walker/target/classes/no/ntnu/rt/walker/Servo.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-1789259686">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.1" value="2" />
-          <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.11" value="1" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="5" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="py" value="4" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="Python" value="4" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="py" value="1007" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="Python" value="1007" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="-1421945434">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="Python Console" value="31" />
-          <entry key="py" value="523" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="Python" value="554" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="py" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="Python" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
   </component>
   <component name="FileEditorManager">
     <leaf />
@@ -106,6 +48,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -117,7 +60,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -149,9 +91,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1366" height="678" extended-state="6" />
+    <frame x="0" y="25" width="1920" height="990" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19508563" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1950448" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -164,14 +106,11 @@
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.23310024" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" visible="true" weight="0.040145986" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="10" visible="true" weight="0.039488968" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file:///usr/lib/python3.6/__future__.py">

@@ -24,13 +24,13 @@ public class RightFeet implements Runnable {
     private final ArrayList<Integer> ports;
     public static AtomicIntegerArray angles;
     private Calculator rightCalc;
-        private Thread rightCalcThread;
+    private Thread rightCalcThread;
 
 
     
 
     public RightFeet(String side) throws IOException {
-        RightFeet.angles = new AtomicIntegerArray(4);
+        RightFeet.angles = new AtomicIntegerArray(5);
         this.ports = new ArrayList<>();
         this.servos = new ArrayList<>();
         this.threads = new ArrayList<>();
@@ -66,6 +66,7 @@ public class RightFeet implements Runnable {
         RightFeet.angles.set(1, pattern[1]);
         RightFeet.angles.set(2, pattern[2]);
         RightFeet.angles.set(3, pattern[3]);
+        RightFeet.angles.set(4, pattern[4]);
     }
 
 }

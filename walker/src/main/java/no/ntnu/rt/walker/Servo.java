@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.sql.Time;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -26,6 +27,8 @@ public class Servo implements Runnable {
     private int port;
     private String side;
     private int servoNumber;
+    private long time;
+    
 
     public Servo(int port, String side, int servoNumber) throws IOException {
         this.port = port;
@@ -35,6 +38,7 @@ public class Servo implements Runnable {
         OutputStream outputstream = socket.getOutputStream();
         out = new PrintWriter(outputstream, false);
         this.angle = 0;
+        time = System.currentTimeMillis();
 
     }
 
@@ -43,7 +47,7 @@ public class Servo implements Runnable {
     }
 
     public void move(int angle) {
-        if (this.angle != angle) {
+        if ((this.angle != angle) || timeHasGone()) {
             out.print("" + angle);
             out.flush();
             this.angle = angle;
@@ -68,6 +72,12 @@ public class Servo implements Runnable {
                 Logger.getLogger(Servo.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+    }
+    private boolean timeHasGone(){
+        if (time + 500 >= System.currentTimeMillis()){
+            return false;
+        }
+        return false;
     }
 
 }

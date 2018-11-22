@@ -29,7 +29,7 @@ public class LeftFeet implements Runnable {
     boolean recursive = true;
 
     public LeftFeet(String side) throws IOException {
-        LeftFeet.angles = new AtomicIntegerArray(4);
+        LeftFeet.angles = new AtomicIntegerArray(5);
         this.ports = new ArrayList<>();
         this.servos = new ArrayList<>();
         this.threads = new ArrayList<>();
@@ -65,6 +65,7 @@ public class LeftFeet implements Runnable {
         LeftFeet.angles.set(1, pattern[1]);
         LeftFeet.angles.set(2, pattern[2]);
         LeftFeet.angles.set(3, pattern[3]);
+        LeftFeet.angles.set(4, pattern[4]);
     }
 
 }

@@ -27,7 +27,11 @@ public class RightCalculator extends Calculator implements Runnable {
             //super.getWalk().calculate(Constants.currentFootStateRight, Constants.liftKnee, super.getSide(), 15);
             //super.getWalk().calculate(Constants.currentFootStateRight, Constants.putKnee, super.getSide(), 5);
             //Thread.sleep(8000);
-            super.getWalk().calculate(Constants.currentFootStateRight, Constants.startValues, super.getSide(), 10);
+            super.getWalk().calculate(Constants.startValuesR, Constants.currentFootStateRight, super.getSide(), 25);
+            Thread.sleep(1500);
+            //super.getWalk().calculate(Constants.currentFootStateRight, Constants.rightFootWalk0, super.getSide(), 10);
+            //Thread.sleep(8000);
+            //super.getWalk().calculate(Constants.currentFootStateRight, Constants.startValuesR, super.getSide(), 25);
         } catch (InterruptedException ex) {
             Logger.getLogger(LeftFeet.class.getName()).log(Level.SEVERE, null, ex);
         }
