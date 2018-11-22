@@ -21,6 +21,9 @@ public class LeftFeet implements Runnable {
     private final ArrayList<Thread> threads;
     private final ArrayList<Integer> ports;
     public static AtomicIntegerArray angles;
+    public WalkCalc walk;
+
+    boolean recursive = true;
 
     public LeftFeet(String side) throws IOException {
         LeftFeet.angles = new AtomicIntegerArray(4);
@@ -49,24 +52,31 @@ public class LeftFeet implements Runnable {
         while (Constants.walking) {
             Integer state = Constants.state.get();
             switch (state) {
-                case 0:
-                    {
-                        Integer[] pattern = Constants.leftFootInit;
+                case 0: {
+                    Integer[] pattern = Constants.leftFootInit;
+                    setServos(pattern);
+                    break;
+                }
+                case 1: {
+                    Integer[] pattern = Constants.leftFootWalk0;
+                    setServos(pattern);
+                    break;
+                }
+                case 2: {
+                    Integer[] pattern = Constants.leftFootWalk0;
+                    setServos(pattern);
+                    break;
+                }
+                case 3: {
+                    int step = 1;
+
+                    while (step <= 40) {
+                        Integer[] pattern = walk.Walk(step, recursive);
                         setServos(pattern);
-                        break;
                     }
-                case 1:
-                    {
-                        Integer[] pattern = Constants.leftFootWalk0;
-                        setServos(pattern);
-                        break;
-                    }
-                case 2:
-                    {
-                        Integer[] pattern = Constants.leftFootWalk0;
-                        setServos(pattern);
-                        break;
-                    }
+                    recursive = !recursive;
+                    break;
+                }
                 case 5:
                     setServos(Constants.sitPartlyDown);
                     break;

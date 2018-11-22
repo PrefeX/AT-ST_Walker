@@ -31,10 +31,11 @@ class Walker {
         Constants.state = new AtomicInteger(0);
         leftFoot.start();
         rightFoot.start();
+
         Thread.sleep(2000);
-        Constants.state = new AtomicInteger(1);
-        Thread.sleep(2000);
-        Constants.state = new AtomicInteger(2);
+        Constants.state = new AtomicInteger(3);
+        System.out.println("State is now: "+ Constants.state);
+        
         
         return true;
     }
