@@ -29,13 +29,6 @@ public class Serial implements Runnable {
         getPorts();
         this.serialPort = new SerialPort(portNr);
         this.portNr = portNr;
-
-        try {
-            startSerial(portNr);
-        }
-        catch (InterruptedException | SerialPortException ex) {
-            Logger.getLogger(Serial.class.getName()).log(Level.SEVERE, null, ex);
-        }
     }
 
 
@@ -124,7 +117,7 @@ public class Serial implements Runnable {
      *
      * @return Am array containing the gyroscope values
      */
-    public float[] getValues() {
+    public synchronized float[] getValues() {
         return this.values;
     }
 

@@ -14,6 +14,6 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
         Walker walker = new Walker();
-        walker.walk();
+        walker.walk();    
     }
 }

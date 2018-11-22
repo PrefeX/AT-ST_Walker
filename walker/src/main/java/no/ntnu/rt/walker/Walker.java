@@ -18,12 +18,17 @@ class Walker {
     private final RightFeet right;
     Thread leftFoot;
     Thread rightFoot;
+    Serial serial;
+    Thread serialThread;
 
     public Walker() throws IOException {
         left = new LeftFeet("left");
         right = new RightFeet("right");
         leftFoot = new Thread(left);
         rightFoot = new Thread(right);
+        serial = new Serial("COM1");
+        serialThread = new Thread(serial);
+        serialThread.start();
 
     }
 
