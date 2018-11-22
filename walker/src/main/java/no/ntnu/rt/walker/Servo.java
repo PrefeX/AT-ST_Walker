@@ -49,7 +49,6 @@ public class Servo implements Runnable {
             this.angle = angle;
             System.out.println("Angle of " + this.port + " is " + angle);
         }
-
     }
 
     @Override

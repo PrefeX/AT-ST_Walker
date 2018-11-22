@@ -42,8 +42,8 @@ class Walker {
         Thread.sleep(2000);
         //Constants.state = new AtomicInteger(1);
         
-        //walkCalc.calculate(Constants.leftFootInit, Constants.leftFootWalk0);
-        Constants.state = new AtomicInteger(3);
+        walkCalc.calculate(Constants.leftFootInit, Constants.leftFootWalk0);
+        Constants.state = new AtomicInteger(4);
         System.out.println("State is now: "+ Constants.state);
         
         
