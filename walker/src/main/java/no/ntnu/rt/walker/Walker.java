@@ -35,24 +35,21 @@ class Walker {
     }
 
     public boolean walk() throws InterruptedException {
-        Constants.state = new AtomicInteger(0);
+        
         leftFoot.start();
         rightFoot.start();
 
         Thread.sleep(2000);
-        //Constants.state = new AtomicInteger(1);
-        
-        Constants.state = new AtomicInteger(4);
-        walkCalc.calculate(Constants.leftFootInit, Constants.leftFootWalk00);
-        Thread.sleep(1000);
-        //walkCalc.calculate(Constants.leftFootWalk00, Constants.leftFootWalk0);
-        
-        System.out.println("State is now: " + Constants.state);
-        //Thread.sleep(1000);
-        walkCalc.calculate(Constants.rightFootInit, Constants.rightFootWalk00);
-        
+
+        /*System.out.println("plz dont rip");
+        walkCalc.calculate(Constants.rightFootInit, Constants.rightFootWalk090, "Right");
+        walkCalc.calculate(Constants.leftFootInit, Constants.leftFootWalk090, "Left");
+        Thread.sleep(200);
+        walkCalc.calculate(Constants.leftFootWalk090, Constants.leftFootWalk091, "Left");
+        Thread.sleep(200);
+        walkCalc.calculate(Constants.leftFootWalk091, Constants.leftFootWalk092, "Left");
+         */
         return true;
     }
-    
 
 }

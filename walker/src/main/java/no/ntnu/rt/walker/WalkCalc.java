@@ -18,36 +18,8 @@ import java.util.Arrays;
  */
 public class WalkCalc {
 
-    int hipTurnBase = 37;
-
-    int hipBase = 30;
-    int kneeBase = 130;
-    int ancleBase = 50;
-
-    int hipMax = 50;
-    int kneeMax = 170;
-    int ancleMax = 90;
-
-    public Integer[] Walk(int steps, boolean forward) {
-
-        Integer[] foot;
-
-        if (forward) {
-            hipBase += (steps / 2);
-            kneeBase += steps;
-            ancleBase += steps;
-            foot = new Integer[]{hipTurnBase, hipBase, kneeBase, ancleBase};
-        } else {
-            hipMax -= (steps / 2);
-            kneeMax -= steps;
-            ancleMax -= steps;
-            foot = new Integer[]{hipTurnBase, hipMax, kneeMax, ancleMax};
-        }
-        return foot;
-
-    }
-
-    public void calculate(Integer[] start, Integer[] stop) throws InterruptedException {
+    public void calculate(Integer[] start, Integer[] stop, String foot) throws InterruptedException {
+        
         Integer[] current = start;
         boolean calculating = true;
         while (calculating) {
@@ -56,15 +28,21 @@ public class WalkCalc {
                     if (current[i] > stop[i]) {
                         current[i] = current[i] - 1;
                         System.out.println("" + current[i] + "  " + stop[i]);
-                    }
-                    else if (current[i] < stop[i]) {
+                    } else if (current[i] < stop[i]) {
                         current[i] = current[i] + 1;
                         System.out.println("" + current[i] + "  " + stop[i]);
                     }
 
                 }
             }
-            if(Arrays.equals(current, stop)){
+            if (foot.equalsIgnoreCase("left")) {
+                Constants.currentFootStateLeft = current;
+            } else {
+                Constants.currentFootStateRight = current;
+            }
+            
+            
+            if (Arrays.equals(current, stop)) {
                 calculating = false;
             }
             /*for (Integer currentInteger : current) {
@@ -75,7 +53,7 @@ public class WalkCalc {
             }
             }
             }*/
-            Constants.currentFootState = current;
+
             Thread.sleep(5);
         }
     }
