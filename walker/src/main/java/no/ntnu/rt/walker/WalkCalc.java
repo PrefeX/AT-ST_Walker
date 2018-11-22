@@ -47,19 +47,20 @@ public class WalkCalc {
 
     }
 
-    public void calculate(Integer[] start, Integer[] stop) {
+    public void calculate(Integer[] start, Integer[] stop) throws InterruptedException {
         Integer[] current = start;
         while (!Arrays.equals(current, stop)) {
+            
             for (Integer currentInteger : current) {
                 for (Integer stopInteger : stop) {
                     if (!currentInteger.equals(stopInteger)) {
-                        currentInteger++;
+                        currentInteger = currentInteger + 1;
                         
                     }
                 }
             }
             Constants.currentFootState = current;
-            
+            Thread.sleep(100);
         }
     }
 

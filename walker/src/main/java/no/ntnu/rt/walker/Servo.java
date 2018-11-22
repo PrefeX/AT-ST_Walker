@@ -43,12 +43,12 @@ public class Servo implements Runnable {
     }
 
     public void move(int angle) {
-        //System.out.println(angle);
-        byte bAngle = (byte) angle;
-        out.print("" + angle);
-        out.flush();
-        this.angle = angle;
-        System.out.println("Angle of " + this.port + " is " + angle);
+        if (this.angle != angle) {
+            out.print("" + angle);
+            out.flush();
+            this.angle = angle;
+            System.out.println("Angle of " + this.port + " is " + angle);
+        }
 
     }
 

@@ -21,9 +21,10 @@ public class LeftFeet implements Runnable {
     private final ArrayList<Thread> threads;
     private final ArrayList<Integer> ports;
     public static AtomicIntegerArray angles;
-    //public WalkCalc walk;
+    public WalkCalc walk;
 
     boolean recursive = true;
+    
 
     public LeftFeet(String side) throws IOException {
         LeftFeet.angles = new AtomicIntegerArray(4);
@@ -32,6 +33,7 @@ public class LeftFeet implements Runnable {
         this.threads = new ArrayList<>();
         this.ports.addAll(Arrays.asList(Constants.leftFootPorts));
         this.side = side;
+        this.walk = new WalkCalc();
         int i = 0;
         for (Integer port : this.ports) {
 
@@ -67,16 +69,17 @@ public class LeftFeet implements Runnable {
                     setServos(pattern);
                     break;
                 }
-                /*case 3: {
-                int step = 1;
-                
-                while (step <= 40) {
-                Integer[] pattern = walk.Walk(step, recursive);
-                setServos(pattern);
+                case 3: {
+                    int step = 1;
+
+                    while (step <= 40) {
+                        Integer[] pattern = walk.Walk(step, recursive);
+                        setServos(pattern);
+                    }
+                    
+                    recursive = !recursive;
+                    break;
                 }
-                recursive = !recursive;
-                break;
-                }*/
                 case 4:
                     setServos(Constants.currentFootState);
                     break;

@@ -67,6 +67,12 @@ public class RightFeet implements Runnable {
                         setServos(pattern);
                         break;
                     }
+                case 4:
+                    {
+                        Integer[] pattern = Constants.currentFootState;
+                        setServos(pattern);
+                        break;
+                    }
                 case 5:
                     setServos(Constants.sitPartlyDown);
                     break;
