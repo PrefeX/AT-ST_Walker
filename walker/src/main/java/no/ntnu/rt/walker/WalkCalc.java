@@ -64,6 +64,9 @@ public class WalkCalc {
 
                 }
             }
+            if(Arrays.equals(current, stop)){
+                calculating = false;
+            }
             /*for (Integer currentInteger : current) {
             for (Integer stopInteger : stop) {
             if (!currentInteger.equals(stopInteger)) {

@@ -69,7 +69,7 @@ public class RightFeet implements Runnable {
                     }
                 case 4:
                     {
-                        Integer[] pattern = Constants.currentFootState;
+                        Integer[] pattern = Constants.rightFootInit;
                         setServos(pattern);
                         break;
                     }
