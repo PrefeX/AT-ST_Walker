@@ -21,9 +21,13 @@ public class RightCalculator extends Calculator implements Runnable {
     @Override
     public void walkingPattern() {
         try {
-            super.getWalk().calculate(Constants.currentFootStateRight, Constants.currentFootStateRight, super.getSide());
-            Thread.sleep(8000);
-            super.getWalk().calculate(Constants.currentFootStateRight, Constants.startValues, super.getSide());
+          //  Thread.sleep(2000);
+          //  Thread.sleep(1000);
+            
+            //super.getWalk().calculate(Constants.currentFootStateRight, Constants.liftKnee, super.getSide(), 15);
+            //super.getWalk().calculate(Constants.currentFootStateRight, Constants.putKnee, super.getSide(), 5);
+            //Thread.sleep(8000);
+            super.getWalk().calculate(Constants.currentFootStateRight, Constants.startValues, super.getSide(), 10);
         } catch (InterruptedException ex) {
             Logger.getLogger(LeftFeet.class.getName()).log(Level.SEVERE, null, ex);
         }

@@ -28,7 +28,6 @@ public class LeftFeet implements Runnable {
 
     boolean recursive = true;
 
-    
     public LeftFeet(String side) throws IOException {
         LeftFeet.angles = new AtomicIntegerArray(4);
         this.ports = new ArrayList<>();
@@ -60,7 +59,6 @@ public class LeftFeet implements Runnable {
             setServos(Constants.currentFootStateLeft);
         }
     }
-    
 
     private void setServos(Integer[] pattern) {
         LeftFeet.angles.set(0, pattern[0]);

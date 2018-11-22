@@ -14,19 +14,19 @@ public class Constants {
     public static String serverAddress = "158.38.140.203";
     public static Integer[] leftFootPorts = new Integer[]{8011,8012,8013,8014};
     public static Integer[] rightFootPorts = new Integer[]{8015,8016,8017,8018};
-    public static Integer[] startValues = new Integer[]{37, 40, 100, 65};
+    public static Integer[] startValues = new Integer[]{37, 40, 100, 68};
 
-    public static volatile Integer[] currentFootStateLeft = new Integer[]{37, 40, 100, 65};
-    public static volatile Integer[] currentFootStateRight = new Integer[]{37, 40, 100, 65};
-        public static Integer[] WalkL = new Integer[]{37, 40, 100, 80};
+    public static volatile Integer[] currentFootStateLeft = new Integer[]{37, 40, 100, 90};
+    public static volatile Integer[] currentFootStateRight = new Integer[]{37, 40, 100, 68};
+        public static Integer[] WalkL = new Integer[]{37, 40, 100, 68};
 
     
     
     // Rasmus leker seg
-    public static Integer[] leftFootWalk090 = new Integer[]{37, 60, 120, 50};
-    public static Integer[] leftFootWalk091 = new Integer[]{37, 80, 120, 80};
+    public static Integer[] liftKnee = new Integer[]{37, 40, 130, 50};
+    public static Integer[] putKnee = new Integer[]{37, 60, 110, 0};
+
     public static Integer[] leftFootWalk092 = new Integer[]{37, 80, 70, 60};
-    
     public static Integer[] rightFootWalk090 = new Integer[]{37, 50, 80, 60};
     public static Integer[] rightFootWalk091 = new Integer[]{37, 80, 140, 80};
     public static Integer[] rightFootWalk092 = new Integer[]{37, 80, 70, 60};

@@ -18,7 +18,7 @@ import java.util.Arrays;
  */
 public class WalkCalc {
 
-    public void calculate(Integer[] start, Integer[] stop, String foot) throws InterruptedException {
+    public void calculate(Integer[] start, Integer[] stop, String foot, long speed) throws InterruptedException {
         
         Integer[] current = start;
         boolean calculating = true;
@@ -54,7 +54,7 @@ public class WalkCalc {
             }
             }*/
 
-            Thread.sleep(5);
+            Thread.sleep(speed);
         }
     }
 

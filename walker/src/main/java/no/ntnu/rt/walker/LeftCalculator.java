@@ -21,13 +21,13 @@ public class LeftCalculator extends Calculator implements Runnable {
     @Override
     public void walkingPattern() {
         try {
-            Thread.sleep(2000);
+            //Thread.sleep(2000);
 
-            super.getWalk().calculate(Constants.currentFootStateLeft, Constants.WalkL, super.getSide());
-            Thread.sleep(100);
-            super.getWalk().calculate(Constants.currentFootStateLeft, Constants.leftFootWalk090, super.getSide());
-            Thread.sleep(8000);
-            super.getWalk().calculate(Constants.currentFootStateLeft, Constants.startValues, super.getSide());
+            //super.getWalk().calculate(Constants.currentFootStateLeft, Constants.WalkL, super.getSide(), 25);
+            //Thread.sleep(1000);
+            //super.getWalk().calculate(Constants.currentFootStateLeft, Constants.leftFootWalk090, super.getSide());
+            //Thread.sleep(8000);
+            super.getWalk().calculate(Constants.currentFootStateLeft, Constants.startValues, super.getSide(), 5);
 
         } catch (InterruptedException ex) {
             Logger.getLogger(LeftFeet.class.getName()).log(Level.SEVERE, null, ex);
