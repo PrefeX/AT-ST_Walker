@@ -18,7 +18,7 @@ public class Serial implements Runnable {
     private final SerialPort serialPort;
     private final String portNr;
 
-    private float[] values;
+    public float[] values = new float[]{0, 0, 0};
 
 
     /**
@@ -97,7 +97,9 @@ public class Serial implements Runnable {
 
 
     /**
-     * Transforms and splits the transmitted string back to readable float values.
+     * Transforms and splits the transmitted string back to readable float
+     * values.
+     *
      * @param transmissionString The string that should be parsed
      */
     private void parseInput(String transmissionString) {
@@ -106,8 +108,16 @@ public class Serial implements Runnable {
 
         // Cast to float
         for (int i = 0; i < values.length; i++) {
-            this.values[i] = Float.parseFloat(values[i]);
+            //System.out.println(values[i]);
+            
+            try {
+                this.values[i] = Float.parseFloat(values[i]);
+            }
+            catch (Exception e) {
+            }
         }
+
+        Constants.gyro = this.values;
     }
 
 
