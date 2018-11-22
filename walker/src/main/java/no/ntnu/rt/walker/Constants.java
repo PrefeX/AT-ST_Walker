@@ -15,11 +15,22 @@ public class Constants {
     public static Integer[] leftFootPorts = new Integer[]{8011, 8012, 8013, 8014, 8015};
     
     public static Integer[] rightFootPorts = new Integer[]{8016, 8017, 8018, 8019, 8020};
-    public static Integer[] startValuesL = new Integer[]{37, 100, 0, 90, 110};
-    public static Integer[] startValuesR = new Integer[]{37, 100, 0, 90, 100};
+    public static Integer[] startValuesL = new Integer[]{37, 100, 90, 90, 110};
+    public static Integer[] startValuesR = new Integer[]{37, 100, 90, 90, 100};
 
-    public static volatile Integer[] currentFootStateLeft = new Integer[]{37, 100, 0, 90, 110};
-    public static volatile Integer[] currentFootStateRight = new Integer[]{37, 100, 0, 90, 100};
+    public static volatile Integer[] l1 = new Integer[]{37, 100, 20, 100, 110};
+    public static volatile Integer[] r1 = new Integer[]{37, 100, 20, 100, 100};
+    
+    public static volatile Integer[] l2 = new Integer[]{37, 100, 90, 100, 110};
+    public static volatile Integer[] r2 = new Integer[]{37, 100, 90, 60, 100};
+    
+    public static volatile Integer[] l3 = new Integer[]{37, 60, 90, 100, 110};
+    public static volatile Integer[] r3 = new Integer[]{37, 100, 20, 60, 100};
+    
+    public static volatile Integer[] l4 = new Integer[]{37, 60, 20, 100, 80};
+    public static volatile Integer[] r4 = new Integer[]{37, 80, 20, 60, 100};
+    public static volatile Integer[] currentFootStateLeft = new Integer[]{37, 100, 90, 90, 110};
+    public static volatile Integer[] currentFootStateRight = new Integer[]{37, 100, 90, 90, 100};
     public static volatile Integer[] leftFootWalk0 = new Integer[]{37, 100, 70, 90, 90};
     public static volatile Integer[] leftFootWalk1 = new Integer[]{37, 10, 70, 90, 90};
     public static volatile Integer[] rightFootWalk0 = new Integer[]{37, 30, 100, 40, 90};
@@ -30,7 +41,6 @@ public class Constants {
     public static volatile float[] gyro = new float[]{0,0,0};
     
     
-    // Rasmus leker seg
     public static Integer[] liftKnee = new Integer[]{37, 40, 130, 50};
     public static Integer[] putKnee = new Integer[]{37, 60, 110, 0};
 
