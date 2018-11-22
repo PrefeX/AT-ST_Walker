@@ -97,7 +97,7 @@ public class Serial implements Runnable {
 
 
     /**
-     * Transforms and splits the transmited string back to readable float values.
+     * Transforms and splits the transmitted string back to readable float values.
      * @param transmissionString The string that should be parsed
      */
     private void parseInput(String transmissionString) {

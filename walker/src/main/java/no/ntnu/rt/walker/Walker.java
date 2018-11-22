@@ -20,6 +20,7 @@ class Walker {
     Thread rightFoot;
     Serial serial;
     Thread serialThread;
+    WalkCalc walkCalc;
 
     public Walker() throws IOException {
         left = new LeftFeet("left");
@@ -28,7 +29,8 @@ class Walker {
         rightFoot = new Thread(right);
         serial = new Serial("COM1");
         serialThread = new Thread(serial);
-        serialThread.start();
+        //serialThread.start();
+        walkCalc = new WalkCalc();
 
     }
 
@@ -37,8 +39,10 @@ class Walker {
         leftFoot.start();
         rightFoot.start();
 
-        Thread.sleep(2000);
-        Constants.state = new AtomicInteger(3);
+        //Thread.sleep(2000);
+        //Constants.state = new AtomicInteger(4);
+        //walkCalc.calculate(Constants.leftFootInit, Constants.leftFootWalk0);
+        //Constants.state = new AtomicInteger(3);
         System.out.println("State is now: "+ Constants.state);
         
         
