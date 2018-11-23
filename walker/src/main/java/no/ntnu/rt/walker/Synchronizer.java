@@ -5,22 +5,31 @@
  */
 package no.ntnu.rt.walker;
 
+
 /**
  *
  * @author andreas
  */
 public class Synchronizer {
-    public synchronized boolean sync() {
-        while (Constants.otherFootNotFinshed) {
-            try {
-                wait();
-            } catch (InterruptedException e)  {
-                System.out.println("should not happen");
+
+    public synchronized void sync() {
+        if (!Constants.waitingForSync) {
+            Constants.waitingForSync = true;
+
+            while (Constants.waitingForSync) {
+                try {
+                    System.out.println(Thread.currentThread().getName() + " is waiting...");
+                    wait();
+                } catch (InterruptedException e) {
+                    System.out.println("should not happen");
+                }
             }
+            System.out.println(Thread.currentThread().getName() + " likely woke up?");
+            
+        } else {
+            System.out.println("Sending the wakeup signal from sync to the other threads");
+            Constants.waitingForSync = false;
+            notifyAll();
         }
-        Constants.otherFootNotFinshed = true;
- 
-        notifyAll();
-        return true;
     }
 }

@@ -13,7 +13,7 @@ public class Constants {
 
     public static boolean reset = false;
     public static boolean walking = true;
-    public static boolean otherFootNotFinshed = false;
+    public static boolean waitingForSync = false;
     
 
     public static String serverAddress = "158.38.140.203";
