@@ -60,7 +60,7 @@ public class RightCalculator extends Calculator implements Runnable {
                 super.getWalk().calculate(createArray(Constants.currentFootStateRight), Constants.startValuesR, super.getSide(), 10);
             }
         } catch (InterruptedException ex) {
-            Logger.getLogger(LeftFeet.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(RightFoot.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     public int[] createArray(AtomicIntegerArray at){

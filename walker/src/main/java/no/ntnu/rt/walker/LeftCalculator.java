@@ -60,7 +60,7 @@ public class LeftCalculator extends Calculator implements Runnable {
             }
 
         } catch (InterruptedException ex) {
-            Logger.getLogger(LeftFeet.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(LeftFoot.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     public int[] createArray(AtomicIntegerArray at){

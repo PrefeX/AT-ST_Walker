@@ -1,21 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package no.ntnu.rt.walker;
 
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
-import java.sql.Time;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
  *
- * @author andreas
+ * @author Andreas
  */
 public class Servo implements Runnable {
 
@@ -67,19 +61,19 @@ public class Servo implements Runnable {
     public void run() {
         if (this.side.equalsIgnoreCase("left")) {
             //System.out.println(LeftFeet.angles.get(servoNumber));
-            startup(LeftFeet.angles.get(servoNumber));
+            startup(LeftFoot.angles.get(servoNumber));
 
         } else {
-            startup(RightFeet.angles.get(servoNumber));
+            startup(RightFoot.angles.get(servoNumber));
 
         }
         while (Constants.walking) {
             if (this.side.equalsIgnoreCase("left")) {
                 //System.out.println(LeftFeet.angles.get(servoNumber));
-                move(LeftFeet.angles.get(servoNumber));
+                move(LeftFoot.angles.get(servoNumber));
 
             } else {
-                move(RightFeet.angles.get(servoNumber));
+                move(RightFoot.angles.get(servoNumber));
 
             }
             try {

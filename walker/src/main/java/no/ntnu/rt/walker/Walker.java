@@ -14,8 +14,8 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 class Walker {
 
-    private final LeftFeet left;
-    private final RightFeet right;
+    private final LeftFoot left;
+    private final RightFoot right;
     Thread leftFoot;
     Thread rightFoot;
     Serial serial;
@@ -23,8 +23,8 @@ class Walker {
     WalkCalc walkCalc;
 
     public Walker() throws IOException {
-        left = new LeftFeet("left");
-        right = new RightFeet("right");
+        left = new LeftFoot("left");
+        right = new RightFoot("right");
         leftFoot = new Thread(left);
         rightFoot = new Thread(right);
         serial = new Serial("COM1");
