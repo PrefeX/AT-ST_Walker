@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicIntegerArray;
 
-
 /**
  *
  * @author Andreas, Christian
@@ -12,7 +11,6 @@ import java.util.concurrent.atomic.AtomicIntegerArray;
 public class RightFoot extends Foot {
 
     public static AtomicIntegerArray angles;
-
 
     public RightFoot(String side) throws IOException {
         super(side);
@@ -32,11 +30,9 @@ public class RightFoot extends Foot {
         }
     }
 
-
     @Override
     public void run() {
-        setServos(Constants.currentFootStateRight);
-
+        setServos(createArray(Constants.currentFootStateRight));
         servos.forEach((servo) -> {
             this.threads.add(new Thread(servo));
         });
@@ -44,12 +40,19 @@ public class RightFoot extends Foot {
             thread.start();
         });
         while (Constants.walking) {
-            setServos(Constants.currentFootStateRight);
+            setServos(createArray(Constants.currentFootStateRight));
         }
     }
 
+    public int[] createArray(AtomicIntegerArray at) {
+        int[] current = new int[4];
+        for (int i = 0; i < 4; i++) {
+            current[i] = at.get(i);
+        }
+        return current;
+    }
 
-    private void setServos(Integer[] pattern) {
+    private void setServos(int[] pattern) {
         RightFoot.angles.set(0, pattern[0]);
         RightFoot.angles.set(1, pattern[1]);
         RightFoot.angles.set(2, pattern[2]);

@@ -16,8 +16,8 @@ public class Constants {
     public static boolean walking = true;
 
     public static String serverAddress = "158.38.140.203";
-    public static int[] leftFootPorts = new int[]{8011, 8012, 8013, 8014, 8015};
-    public static int[] rightFootPorts = new int[]{8016, 8017, 8018, 8019, 8020};
+    public static Integer[] leftFootPorts = new Integer[]{8011, 8012, 8013, 8014, 8015};
+    public static Integer[] rightFootPorts = new Integer[]{8016, 8017, 8018, 8019, 8020};
 
     public static int[] startValuesL = new int[]{40, 80, 20, 90, 100};
     public static int[] startValuesR = new int[]{40, 80, 20, 90, 90};
