@@ -49,6 +49,8 @@ public class LeftFeet implements Runnable {
 
     @Override
     public void run() {
+        setServos(Constants.currentFootStateLeft);
+
         servos.forEach((servo) -> {
             this.threads.add(new Thread(servo));
         });

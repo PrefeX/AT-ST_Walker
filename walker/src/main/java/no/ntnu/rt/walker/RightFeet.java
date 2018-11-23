@@ -26,9 +26,6 @@ public class RightFeet implements Runnable {
     private Calculator rightCalc;
     private Thread rightCalcThread;
 
-
-    
-
     public RightFeet(String side) throws IOException {
         RightFeet.angles = new AtomicIntegerArray(5);
         this.ports = new ArrayList<>();
@@ -50,6 +47,8 @@ public class RightFeet implements Runnable {
 
     @Override
     public void run() {
+        setServos(Constants.currentFootStateRight);
+
         servos.forEach((servo) -> {
             this.threads.add(new Thread(servo));
         });

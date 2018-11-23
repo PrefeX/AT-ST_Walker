@@ -22,7 +22,7 @@ public class Constants {
     public static volatile Integer[] r1 = new Integer[]{37, 100, 20, 90, 90};
     
     public static volatile Integer[] l2 = new Integer[]{37, 100, 20, 90, 100};
-    public static volatile Integer[] r2 = new Integer[]{37, 100, 35, 60, 90};
+    public static volatile Integer[] r2 = new Integer[]{37, 100, 35, 55, 90};
     
     public static volatile Integer[] l3 = new Integer[]{37, 100, 90, 90, 50};
     public static volatile Integer[] r3 = new Integer[]{37, 100, 35, 60, 90};
@@ -30,8 +30,8 @@ public class Constants {
     public static volatile Integer[] l4 = new Integer[]{37, 120, 30, 90, 50};
     public static volatile Integer[] r4 = new Integer[]{37, 100, 35, 60, 90};
     
-    public static volatile Integer[] l5 = new Integer[]{37, 120, 30, 90, 80};
-    public static volatile Integer[] r5 = new Integer[]{37, 100, 35, 90, 110};
+    public static volatile Integer[] l5 = new Integer[]{37, 120, 40, 90, 80};
+    public static volatile Integer[] r5 = new Integer[]{37, 100, 35, 90, 90};
     public static volatile Integer[] currentFootStateLeft = new Integer[]{37, 100, 20, 90, 100};
     public static volatile Integer[] currentFootStateRight = new Integer[]{37, 100, 20, 90, 90};
     public static volatile Integer[] leftFootWalk0 = new Integer[]{37, 100, 70, 90, 90};

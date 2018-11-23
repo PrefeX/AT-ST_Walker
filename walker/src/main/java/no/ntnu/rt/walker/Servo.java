@@ -66,13 +66,13 @@ public class Servo implements Runnable {
     @Override
     public void run() {
         if (this.side.equalsIgnoreCase("left")) {
-                //System.out.println(LeftFeet.angles.get(servoNumber));
-                startup(LeftFeet.angles.get(servoNumber));
+            //System.out.println(LeftFeet.angles.get(servoNumber));
+            startup(LeftFeet.angles.get(servoNumber));
 
-            } else {
-                startup(RightFeet.angles.get(servoNumber));
+        } else {
+            startup(RightFeet.angles.get(servoNumber));
 
-            }
+        }
         while (Constants.walking) {
             if (this.side.equalsIgnoreCase("left")) {
                 //System.out.println(LeftFeet.angles.get(servoNumber));
