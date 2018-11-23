@@ -28,7 +28,6 @@ public class Servo implements Runnable {
     private String side;
     private int servoNumber;
     private long time;
-    
 
     public Servo(int port, String side, int servoNumber) throws IOException {
         this.port = port;
@@ -55,8 +54,25 @@ public class Servo implements Runnable {
         }
     }
 
+    public void startup(int angle) {
+
+        out.print("" + angle);
+        out.flush();
+        this.angle = angle;
+        System.out.println("Angle of " + this.port + " is " + angle);
+
+    }
+
     @Override
     public void run() {
+        if (this.side.equalsIgnoreCase("left")) {
+                //System.out.println(LeftFeet.angles.get(servoNumber));
+                startup(LeftFeet.angles.get(servoNumber));
+
+            } else {
+                startup(RightFeet.angles.get(servoNumber));
+
+            }
         while (Constants.walking) {
             if (this.side.equalsIgnoreCase("left")) {
                 //System.out.println(LeftFeet.angles.get(servoNumber));
@@ -73,8 +89,9 @@ public class Servo implements Runnable {
             }
         }
     }
-    private boolean timeHasGone(){
-        if (time + 500 >= System.currentTimeMillis()){
+
+    private boolean timeHasGone() {
+        if (time + 500 >= System.currentTimeMillis()) {
             return false;
         }
         return false;

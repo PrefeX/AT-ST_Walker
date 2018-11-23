@@ -23,7 +23,7 @@ public class WalkCalc {
         Integer[] current = start;
         boolean calculating = true;
         while (calculating) {
-            for (int i = 0; i <= 3; i++) {
+            for (int i = 0; i <= 4; i++) {
                 if (!current[i].equals(stop[i])) {
                     if (current[i] > stop[i]) {
                         current[i] = current[i] - 1;
