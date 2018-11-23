@@ -21,35 +21,35 @@ public class Constants {
     public static Integer[] startValuesL = new Integer[]{40, 80, 20, 90, 100};
     public static Integer[] startValuesR = new Integer[]{50, 80, 20, 90, 90};
 
-    public static final Integer[] l1 = new Integer[]{40, 80, 20, 90, 100};
-    public static final Integer[] r1 = new Integer[]{50, 80, 35, 90, 90};
+    public static volatile Integer[] l1 = new Integer[]{40, 80, 20, 90, 100};
+    public static volatile Integer[] r1 = new Integer[]{50, 80, 35, 90, 90};
 
-    public static final Integer[] l2 = new Integer[]{40, 80, 20, 55, 105};
-    public static final Integer[] r2 = new Integer[]{50, 80, 35, 65, 90};
+    public static volatile Integer[] l2 = new Integer[]{40, 80, 20, 55, 105};
+    public static volatile Integer[] r2 = new Integer[]{50, 80, 35, 65, 90};
 
-    public static final Integer[] l21 = new Integer[]{40, 80, 15, 50, 105};
-    public static final Integer[] r21 = new Integer[]{50, 40, 80, 60, 100};
+    public static volatile Integer[] l21 = new Integer[]{40, 80, 15, 50, 105};
+    public static volatile Integer[] r21 = new Integer[]{50, 40, 80, 60, 100};
 
-    public static final Integer[] l3 = new Integer[]{40, 80, 15, 90, 110};
-    public static final Integer[] r3 = new Integer[]{50, 100, 55, 90, 70};
+    public static volatile Integer[] l3 = new Integer[]{40, 80, 15, 90, 110};
+    public static volatile Integer[] r3 = new Integer[]{50, 100, 55, 90, 70};
 
-    public static final Integer[] l31 = new Integer[]{40, 80, 25, 100, 100};
-    public static final Integer[] r31 = new Integer[]{50, 100, 65, 50, 70};
+    public static volatile Integer[] l31 = new Integer[]{40, 80, 25, 100, 100};
+    public static volatile Integer[] r31 = new Integer[]{50, 100, 65, 50, 70};
 
-    public static final Integer[] l4 = new Integer[]{40, 80, 55, 90, 120};
-    public static final Integer[] r4 = new Integer[]{50, 100, 65, 50, 70};
+    public static volatile Integer[] l4 = new Integer[]{40, 80, 55, 90, 120};
+    public static volatile Integer[] r4 = new Integer[]{50, 100, 65, 50, 70};
 
-    public static final Integer[] l5 = new Integer[]{40, 110, 55, 90, 80};
-    public static final Integer[] r5 = new Integer[]{50, 100, 65, 50, 70};
+    public static volatile Integer[] l5 = new Integer[]{40, 110, 55, 90, 80};
+    public static volatile Integer[] r5 = new Integer[]{50, 100, 65, 50, 70};
     
-    public static final Integer[] l51 = new Integer[]{40, 110, 55, 90, 80};
-    public static final Integer[] r51 = new Integer[]{50, 100, 55, 90, 70};
+    public static volatile Integer[] l51 = new Integer[]{40, 110, 55, 90, 80};
+    public static volatile Integer[] r51 = new Integer[]{50, 100, 63, 90, 70};
     
-    public static final Integer[] l52 = new Integer[]{40, 110, 40, 90, 90};
-    public static final Integer[] r52 = new Integer[]{50, 100, 40, 90, 80};
+    public static volatile Integer[] l52 = new Integer[]{40, 110, 40, 90, 90};
+    public static volatile Integer[] r52 = new Integer[]{50, 100, 40, 90, 80};
     
-    public static final Integer[] l6 = new Integer[]{40, 80, 20, 90, 100};
-    public static final Integer[] r6 = new Integer[]{50, 80, 20, 90, 90};
+    public static volatile Integer[] l6 = new Integer[]{40, 80, 20, 90, 100};
+    public static volatile Integer[] r6 = new Integer[]{50, 80, 20, 90, 90};
 
     public static volatile Integer[] currentFootStateLeft = new Integer[]{40, 80, 20, 90, 100};
     public static volatile Integer[] currentFootStateRight = new Integer[]{50, 80, 20, 90, 90};

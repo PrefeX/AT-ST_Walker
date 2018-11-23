@@ -50,6 +50,7 @@ public class RightCalculator extends Calculator implements Runnable {
                     super.getWalk().calculate(Constants.currentFootStateRight, Constants.r5, super.getSide(), 15);
                     System.out.println("Right foot: " + timing());
                     Thread.sleep(1000);
+                    
                     super.getWalk().calculate(Constants.currentFootStateRight, Constants.r51, super.getSide(), 20);
                     System.out.println("Right foot: " + timing());
                     Thread.sleep(1000);
@@ -59,6 +60,8 @@ public class RightCalculator extends Calculator implements Runnable {
                     super.getWalk().calculate(Constants.currentFootStateRight, Constants.r6, super.getSide(), 20);
                     System.out.println("Right foot: " + timing());
                     Thread.sleep(1000);
+                    Constants.currentFootStateRight = Constants.startValuesR;
+                    Thread.sleep(10000);
                 }
 
                 //Thread.sleep(5000);

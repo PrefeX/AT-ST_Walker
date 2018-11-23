@@ -60,6 +60,8 @@ public class LeftCalculator extends Calculator implements Runnable {
                     super.getWalk().calculate(Constants.currentFootStateLeft, Constants.l6, super.getSide(), 20);
                     System.out.println("Left foot: " + timing());
                     Thread.sleep(1000);
+                    Constants.currentFootStateLeft = Constants.startValuesL;
+                    Thread.sleep(10000);
                 }
 
                 //Thread.sleep(5000);
