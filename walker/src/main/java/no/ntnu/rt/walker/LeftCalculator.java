@@ -26,27 +26,44 @@ public class LeftCalculator extends Calculator implements Runnable {
 
         try {
             if (!Constants.reset) {
-                super.getWalk().calculate(Constants.currentFootStateLeft, Constants.l1, super.getSide(), 15);
-                System.out.println("Left foot: " + timing());
                 Thread.sleep(2000);
-                super.getWalk().calculate(Constants.currentFootStateLeft, Constants.l2, super.getSide(), 25);
-                System.out.println("Left foot: " + timing());
-                Thread.sleep(1000);
-                super.getWalk().calculate(Constants.currentFootStateLeft, Constants.l21, super.getSide(), 15);
-                System.out.println("Left foot: " + timing());
-                Thread.sleep(1500);
-                super.getWalk().calculate(Constants.currentFootStateLeft, Constants.l3, super.getSide(), 15);
-                System.out.println("Left foot: " + timing());
-                Thread.sleep(1000);
-                super.getWalk().calculate(Constants.currentFootStateLeft, Constants.l4, super.getSide(), 15);
-                System.out.println("Left foot: " + timing());
-                Thread.sleep(1500);
-                super.getWalk().calculate(Constants.currentFootStateLeft, Constants.l5, super.getSide(), 15);
-                System.out.println("Left foot: " + timing());
-                Thread.sleep(1000);
+                while (Constants.walking) {
 
-                Thread.sleep(5000);
-                super.getWalk().calculate(Constants.currentFootStateLeft, Constants.startValuesL, super.getSide(), 25);
+                    super.getWalk().calculate(Constants.currentFootStateLeft, Constants.l1, super.getSide(), 15);
+                    System.out.println("Left foot: " + timing());
+                    Thread.sleep(3000);
+                    super.getWalk().calculate(Constants.currentFootStateLeft, Constants.l2, super.getSide(), 25);
+                    System.out.println("Left foot: " + timing());
+                    Thread.sleep(1000);
+                    super.getWalk().calculate(Constants.currentFootStateLeft, Constants.l21, super.getSide(), 15);
+                    System.out.println("Left foot: " + timing());
+                    Thread.sleep(1500);
+                    super.getWalk().calculate(Constants.currentFootStateLeft, Constants.l3, super.getSide(), 15);
+                    System.out.println("Left foot: " + timing());
+                    Thread.sleep(1000);
+                    super.getWalk().calculate(Constants.currentFootStateLeft, Constants.l31, super.getSide(), 15);
+                    System.out.println("Left foot: " + timing());
+                    Thread.sleep(1000);
+                    super.getWalk().calculate(Constants.currentFootStateLeft, Constants.l4, super.getSide(), 15);
+                    System.out.println("Left foot: " + timing());
+                    Thread.sleep(1500);
+
+                    super.getWalk().calculate(Constants.currentFootStateLeft, Constants.l5, super.getSide(), 15);
+                    System.out.println("Left foot: " + timing());
+                    Thread.sleep(1000);
+                    super.getWalk().calculate(Constants.currentFootStateLeft, Constants.l51, super.getSide(), 20);
+                    System.out.println("Left foot: " + timing());
+                    Thread.sleep(1000);
+                    super.getWalk().calculate(Constants.currentFootStateLeft, Constants.l52, super.getSide(), 20);
+                    System.out.println("Left foot: " + timing());
+                    Thread.sleep(1000);
+                    super.getWalk().calculate(Constants.currentFootStateLeft, Constants.l6, super.getSide(), 20);
+                    System.out.println("Left foot: " + timing());
+                    Thread.sleep(1000);
+                }
+
+                //Thread.sleep(5000);
+                //super.getWalk().calculate(Constants.currentFootStateLeft, Constants.startValuesL, super.getSide(), 25);
             } else {
                 super.getWalk().calculate(Constants.currentFootStateLeft, Constants.startValuesL, super.getSide(), 10);
             }
