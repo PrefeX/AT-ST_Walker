@@ -14,13 +14,13 @@ public class RightFoot extends Foot {
     public static AtomicIntegerArray angles;
 
 
-    public RightFoot(String side) throws IOException {
-        super(side);
+    public RightFoot(String side, Synchronizer sync) throws IOException {
+        super(side, sync);
         RightFoot.angles = new AtomicIntegerArray(5);
 
         this.ports.addAll(Arrays.asList(Constants.rightFootPorts));
 
-        this.calc = new RightCalculator(this.side);
+        this.calc = new RightCalculator(this.side, super.getSync());
         this.calcThread = new Thread(this.calc);
         calcThread.start();
         int i = 0;

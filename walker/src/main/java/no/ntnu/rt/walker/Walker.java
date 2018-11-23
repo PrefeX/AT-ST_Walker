@@ -21,10 +21,12 @@ class Walker {
     Serial serial;
     Thread serialThread;
     WalkCalc walkCalc;
+    private Synchronizer sync;
 
     public Walker() throws IOException {
-        left = new LeftFoot("left");
-        right = new RightFoot("right");
+        sync = new Synchronizer();
+        left = new LeftFoot("left", sync);
+        right = new RightFoot("right", sync);
         leftFoot = new Thread(left);
         rightFoot = new Thread(right);
         serial = new Serial("COM1");

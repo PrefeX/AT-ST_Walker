@@ -16,4 +16,5 @@ public class Main {
         Walker walker = new Walker();
         walker.walk();    
     }
+    
 }

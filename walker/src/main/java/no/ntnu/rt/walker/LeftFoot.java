@@ -14,13 +14,13 @@ public class LeftFoot extends Foot {
     public static AtomicIntegerArray angles;
 
 
-    public LeftFoot(String side) throws IOException {
-        super(side);
+    public LeftFoot(String side, Synchronizer sync) throws IOException {
+        super(side, sync);
         LeftFoot.angles = new AtomicIntegerArray(5);
 
         this.ports.addAll(Arrays.asList(Constants.leftFootPorts));
 
-        this.calc = new LeftCalculator(this.side);
+        this.calc = new LeftCalculator(this.side, super.getSync());
         calcThread = new Thread(this.calc);
         calcThread.start();
         int i = 0;

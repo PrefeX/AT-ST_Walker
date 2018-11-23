@@ -15,16 +15,22 @@ public class Foot implements Runnable {
     protected final ArrayList<Integer> ports;
     protected Calculator calc;
     protected Thread calcThread;
+    private Synchronizer sync;
 
 
-    public Foot(String side) {
+    public Foot(String side, Synchronizer sync) {
+        this.sync = sync;
         this.ports = new ArrayList<>();
         this.servos = new ArrayList<>();
         this.threads = new ArrayList<>();
         this.side = side;
     }
 
+    public Synchronizer getSync() {
+        return sync;
+    }
 
+ 
     @Override
     public void run() {
         throw new UnsupportedOperationException("Not supported yet.");

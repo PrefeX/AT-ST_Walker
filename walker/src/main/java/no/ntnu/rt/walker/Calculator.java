@@ -18,8 +18,10 @@ class Calculator implements Runnable {
 
     private WalkCalc walk;
     private final String side;
+    private Synchronizer sync;
 
-    public Calculator(String side) {
+    public Calculator(String side, Synchronizer sync) {
+        this.sync = sync;
         this.side = side;
         walk = new WalkCalc();
     }
@@ -49,6 +51,11 @@ class Calculator implements Runnable {
     public String getSide() {
         return side;
     }
+
+    public Synchronizer getSync() {
+        return sync;
+    }
+    
 
     @Override
     public void run() {

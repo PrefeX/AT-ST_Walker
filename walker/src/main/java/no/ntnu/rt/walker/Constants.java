@@ -13,6 +13,8 @@ public class Constants {
 
     public static boolean reset = false;
     public static boolean walking = true;
+    public static boolean otherFootNotFinshed = false;
+    
 
     public static String serverAddress = "158.38.140.203";
     public static Integer[] leftFootPorts = new Integer[]{8011, 8012, 8013, 8014, 8015};
