@@ -10,29 +10,35 @@ package no.ntnu.rt.walker;
  * @author andreas 
  */
 public class Constants {
-    public static boolean reset = true;
+    public static boolean reset = false;
     public static boolean walking = true;
+
     public static String serverAddress = "158.38.140.203";
     public static Integer[] leftFootPorts = new Integer[]{8011, 8012, 8013, 8014, 8015};
-    
     public static Integer[] rightFootPorts = new Integer[]{8016, 8017, 8018, 8019, 8020};
-    public static Integer[] startValuesL = new Integer[]{37, 100, 20, 90, 100};
-    public static Integer[] startValuesR = new Integer[]{37, 100, 20, 90, 90};
 
-    public static volatile Integer[] l1 = new Integer[]{37, 100, 20, 90, 100};
-    public static volatile Integer[] r1 = new Integer[]{37, 100, 20, 90, 90};
+    public static Integer[] startValuesL = new Integer[]{37, 80, 20, 90, 100};
+    public static Integer[] startValuesR = new Integer[]{37, 80, 20, 90, 90};
+
+    public static final Integer[] l1 = new Integer[]{37, 80, 20, 90, 100};
+    public static final Integer[] r1 = new Integer[]{37, 80, 35, 90, 90};
     
-    public static volatile Integer[] l2 = new Integer[]{37, 100, 20, 90, 100};
-    public static volatile Integer[] r2 = new Integer[]{37, 100, 35, 55, 90};
+    public static final Integer[] l2 = new Integer[]{37, 80, 20, 60, 100};
+    public static final Integer[] r2 = new Integer[]{37, 80, 35, 60, 90};
     
-    public static volatile Integer[] l3 = new Integer[]{37, 100, 90, 90, 50};
-    public static volatile Integer[] r3 = new Integer[]{37, 100, 35, 60, 90};
+    public static final Integer[] l21 = new Integer[]{37, 80, 15, 60, 100};
+    public static final Integer[] r21 = new Integer[]{37, 40, 80, 90, 100};
     
-    public static volatile Integer[] l4 = new Integer[]{37, 120, 30, 90, 50};
-    public static volatile Integer[] r4 = new Integer[]{37, 100, 35, 60, 90};
+    public static final Integer[] l3 = new Integer[]{37, 80, 15, 75, 110};
+    public static final Integer[] r3 = new Integer[]{37, 100, 30, 90, 70};
     
-    public static volatile Integer[] l5 = new Integer[]{37, 120, 40, 90, 80};
-    public static volatile Integer[] r5 = new Integer[]{37, 100, 35, 90, 90};
+    public static final Integer[] l4 = new Integer[]{37, 80, 35, 90, 110};
+    public static final Integer[] r4 = new Integer[]{37, 100, 30, 90, 90};
+    
+    public static final Integer[] l5 = new Integer[]{37, 80, 10, 110, 110};
+    public static final Integer[] r5 = new Integer[]{37, 100, 30, 60, 90};
+    
+
     public static volatile Integer[] currentFootStateLeft = new Integer[]{37, 100, 20, 90, 100};
     public static volatile Integer[] currentFootStateRight = new Integer[]{37, 100, 20, 90, 90};
     public static volatile Integer[] leftFootWalk0 = new Integer[]{37, 100, 70, 90, 90};
@@ -45,13 +51,8 @@ public class Constants {
     public static volatile float[] gyro = new float[]{0,0,0};
     
     
-    public static Integer[] liftKnee = new Integer[]{37, 40, 130, 50};
-    public static Integer[] putKnee = new Integer[]{37, 60, 110, 0};
-
-    public static Integer[] leftFootWalk092 = new Integer[]{37, 80, 70, 60};
-    public static Integer[] rightFootWalk090 = new Integer[]{37, 50, 80, 60};
-    public static Integer[] rightFootWalk091 = new Integer[]{37, 80, 140, 80};
-    public static Integer[] rightFootWalk092 = new Integer[]{37, 80, 70, 60};
+    
+    
     
     
     
