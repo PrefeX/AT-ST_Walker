@@ -5,6 +5,8 @@
  */
 package no.ntnu.rt.walker;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -14,8 +16,11 @@ import java.util.logging.Logger;
  */
 public class RightCalculator extends Calculator implements Runnable {
 
+    
+
     public RightCalculator(String side) {
         super(side);
+        
     }
 
     @Override
@@ -23,16 +28,22 @@ public class RightCalculator extends Calculator implements Runnable {
         try {
             if (!Constants.reset) {
                 super.getWalk().calculate(Constants.currentFootStateRight, Constants.r1, super.getSide(), 10);
+                System.out.println("Right foot: " + timing());
                 Thread.sleep(2000);
                 super.getWalk().calculate(Constants.currentFootStateRight, Constants.r2, super.getSide(), 15);
+                System.out.println("Right foot: " + timing());
                 Thread.sleep(1000);
                 super.getWalk().calculate(Constants.currentFootStateRight, Constants.r21, super.getSide(), 15);
+                System.out.println("Right foot: " + timing());
                 Thread.sleep(1000);
-                super.getWalk().calculate(Constants.currentFootStateRight, Constants.r3, super.getSide(), 20);
+                super.getWalk().calculate(Constants.currentFootStateRight, Constants.r3, super.getSide(), 10);
+                System.out.println("Right foot: " + timing());
                 Thread.sleep(1200);
                 super.getWalk().calculate(Constants.currentFootStateRight, Constants.r4, super.getSide(), 10);
+                System.out.println("Right foot: " + timing());
                 Thread.sleep(1000);
-                super.getWalk().calculate(Constants.currentFootStateRight, Constants.r5, super.getSide(), 20);
+                super.getWalk().calculate(Constants.currentFootStateRight, Constants.r5, super.getSide(), 15);
+                System.out.println("Right foot: " + timing());
                 Thread.sleep(1000);
 
                 Thread.sleep(5000);

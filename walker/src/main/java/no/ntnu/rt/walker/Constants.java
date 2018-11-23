@@ -23,20 +23,20 @@ public class Constants {
     public static final Integer[] l1 = new Integer[]{37, 80, 20, 90, 100};
     public static final Integer[] r1 = new Integer[]{37, 80, 35, 90, 90};
     
-    public static final Integer[] l2 = new Integer[]{37, 80, 20, 60, 100};
+    public static final Integer[] l2 = new Integer[]{37, 80, 20, 60, 105};
     public static final Integer[] r2 = new Integer[]{37, 80, 35, 60, 90};
     
-    public static final Integer[] l21 = new Integer[]{37, 80, 15, 60, 100};
+    public static final Integer[] l21 = new Integer[]{37, 80, 15, 60, 105};
     public static final Integer[] r21 = new Integer[]{37, 40, 80, 90, 100};
     
-    public static final Integer[] l3 = new Integer[]{37, 80, 15, 75, 110};
+    public static final Integer[] l3 = new Integer[]{37, 80, 15, 90, 110};
     public static final Integer[] r3 = new Integer[]{37, 100, 30, 90, 70};
     
     public static final Integer[] l4 = new Integer[]{37, 80, 35, 90, 110};
-    public static final Integer[] r4 = new Integer[]{37, 100, 30, 90, 90};
+    public static final Integer[] r4 = new Integer[]{37, 100, 30, 90, 80};
     
-    public static final Integer[] l5 = new Integer[]{37, 80, 10, 110, 110};
-    public static final Integer[] r5 = new Integer[]{37, 100, 30, 60, 90};
+    public static final Integer[] l5 = new Integer[]{37, 80, 10, 130, 125};
+    public static final Integer[] r5 = new Integer[]{37, 100, 40, 60 , 80   };
     
 
     public static volatile Integer[] currentFootStateLeft = new Integer[]{37, 100, 20, 90, 100};
