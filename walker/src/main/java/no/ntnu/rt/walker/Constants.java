@@ -5,6 +5,8 @@
  */
 package no.ntnu.rt.walker;
 
+import java.util.concurrent.atomic.AtomicIntegerArray;
+
 /**
  *
  * @author andreas 
@@ -14,38 +16,45 @@ public class Constants {
     public static boolean walking = true;
 
     public static String serverAddress = "158.38.140.203";
-    public static Integer[] leftFootPorts = new Integer[]{8011, 8012, 8013, 8014, 8015};
-    public static Integer[] rightFootPorts = new Integer[]{8016, 8017, 8018, 8019, 8020};
+    public static int[] leftFootPorts = new int[]{8011, 8012, 8013, 8014, 8015};
+    public static int[] rightFootPorts = new int[]{8016, 8017, 8018, 8019, 8020};
 
-    public static Integer[] startValuesL = new Integer[]{37, 80, 20, 90, 100};
-    public static Integer[] startValuesR = new Integer[]{37, 80, 20, 90, 90};
+    public static int[] startValuesL = new int[]{40, 80, 20, 90, 100};
+    public static int[] startValuesR = new int[]{40, 80, 20, 90, 90};
 
-    public static final Integer[] l1 = new Integer[]{37, 80, 20, 90, 100};
-    public static final Integer[] r1 = new Integer[]{37, 80, 35, 90, 90};
+    public static final int[] l1 = new int[]{40, 80, 20, 90, 100};
+    public static final int[] r1 = new int[]{40, 80, 35, 90, 90};
     
-    public static final Integer[] l2 = new Integer[]{37, 80, 20, 60, 105};
-    public static final Integer[] r2 = new Integer[]{37, 80, 35, 60, 90};
+    public static final int[] l2 = new int[]{40, 80, 20, 60, 105};
+    public static final int[] r2 = new int[]{40, 80, 35, 60, 90};
     
-    public static final Integer[] l21 = new Integer[]{37, 80, 15, 60, 105};
-    public static final Integer[] r21 = new Integer[]{37, 40, 80, 90, 100};
+    public static final int[] l21 = new int[]{40, 80, 15, 60, 105};
+    public static final int[] r21 = new int[]{40, 40, 80, 85, 100};
     
-    public static final Integer[] l3 = new Integer[]{37, 80, 15, 90, 110};
-    public static final Integer[] r3 = new Integer[]{37, 100, 30, 90, 70};
+    public static final int[] l3 = new int[]{40, 80, 15, 60, 110};
+    public static final int[] r3 = new int[]{40, 90, 50, 85, 70};
     
-    public static final Integer[] l4 = new Integer[]{37, 80, 35, 90, 110};
-    public static final Integer[] r4 = new Integer[]{37, 100, 30, 90, 80};
+    public static final int[] l31 = new int[]{40, 80, 25, 100, 110};
+    public static final int[] r31 = new int[]{40, 100, 65, 70, 70};
     
-    public static final Integer[] l5 = new Integer[]{37, 80, 10, 130, 125};
-    public static final Integer[] r5 = new Integer[]{37, 100, 40, 60 , 80   };
+    public static final int[] l4 = new int[]{40, 80, 25, 120, 110};
+    public static final int[] r4 = new int[]{40, 100, 65, 60, 70};
+    
+    public static final int[] l41 = new int[]{40, 80, 25, 90, 130};
+    public static final int[] r41 = new int[]{40, 100, 65, 60, 70};
+    
+    public static final int[] l42 = new int[]{40, 120, 70, 90, 130};
+    public static final int[] r42 = new int[]{40, 100, 65, 60, 70};
+    
+    public static final int[] l5 = new int[]{40, 80, 10, 130, 125};
+    public static final int[] r5 = new int[]{40, 100, 40, 60 , 80};
     
 
-    public static volatile Integer[] currentFootStateLeft = new Integer[]{37, 100, 20, 90, 100};
-    public static volatile Integer[] currentFootStateRight = new Integer[]{37, 100, 20, 90, 90};
-    public static volatile Integer[] leftFootWalk0 = new Integer[]{37, 100, 70, 90, 90};
-    public static volatile Integer[] leftFootWalk1 = new Integer[]{37, 10, 70, 90, 90};
-    public static volatile Integer[] rightFootWalk0 = new Integer[]{37, 30, 100, 40, 90};
-    
-    public static Integer[] WalkL = new Integer[]{37, 40, 100, 90, 68};
+    public static volatile int[] footStateL = new int[]{40, 100, 20, 90, 100};
+    public static volatile int[] footStateR = new int[]{40, 100, 20, 90, 90};
+    public static volatile AtomicIntegerArray currentFootStateRight = new AtomicIntegerArray(footStateR);
+    public static volatile AtomicIntegerArray currentFootStateLeft = new AtomicIntegerArray(footStateL);
+
 
     // Gyroscope data
     public static volatile float[] gyro = new float[]{0,0,0};

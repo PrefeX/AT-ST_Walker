@@ -5,9 +5,6 @@
       <change beforePath="$PROJECT_DIR$/../walker/src/main/java/no/ntnu/rt/walker/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/../walker/src/main/java/no/ntnu/rt/walker/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../walker/src/main/java/no/ntnu/rt/walker/LeftCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../walker/src/main/java/no/ntnu/rt/walker/LeftCalculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../walker/src/main/java/no/ntnu/rt/walker/RightCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../walker/src/main/java/no/ntnu/rt/walker/RightCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../walker/src/main/java/no/ntnu/rt/walker/RightFeet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../walker/src/main/java/no/ntnu/rt/walker/RightFeet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../walker/src/main/java/no/ntnu/rt/walker/Servo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../walker/src/main/java/no/ntnu/rt/walker/Servo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../walker/target/classes/no/ntnu/rt/walker/Servo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../walker/target/classes/no/ntnu/rt/walker/Servo.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

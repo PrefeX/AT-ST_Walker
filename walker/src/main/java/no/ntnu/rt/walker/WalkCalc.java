@@ -6,6 +6,7 @@
 package no.ntnu.rt.walker;
 
 import java.util.Arrays;
+import java.util.concurrent.atomic.AtomicIntegerArray;
 
 /**
  *
@@ -18,13 +19,13 @@ import java.util.Arrays;
  */
 public class WalkCalc {
 
-    public void calculate(Integer[] start, Integer[] stop, String foot, long speed) throws InterruptedException {
+    public void calculate(int[] start, int[] stop, String foot, long speed) throws InterruptedException {
         
-        Integer[] current = start;
+        int[] current = start;
         boolean calculating = true;
         while (calculating) {
             for (int i = 0; i <= 4; i++) {
-                if (!current[i].equals(stop[i])) {
+                if (current[i] != stop[i]) {
                     if (current[i] > stop[i]) {
                         current[i] = current[i] - 1;
                         //System.out.println("" + current[i] + "  " + stop[i]);
@@ -36,9 +37,10 @@ public class WalkCalc {
                 }
             }
             if (foot.equalsIgnoreCase("left")) {
-                Constants.currentFootStateLeft = current;
+                
+                Constants.currentFootStateLeft = new AtomicIntegerArray(current);
             } else {
-                Constants.currentFootStateRight = current;
+                Constants.currentFootStateLeft = new AtomicIntegerArray(current);
             }
             
             
