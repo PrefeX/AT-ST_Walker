@@ -49,8 +49,8 @@ public class LeftFoot extends Foot {
         }
     }
     public int[] createArray(AtomicIntegerArray at){
-        int[] current = new int[4];
-        for (int i = 0; i < 4; i++) {
+        int[] current = new int[5];
+        for (int i = 0; i < 5; i++) {
             current[i] = at.get(i);
         }
         return current;

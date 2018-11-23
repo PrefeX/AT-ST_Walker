@@ -27,14 +27,14 @@ public class LeftCalculator extends Calculator implements Runnable {
 
         try {
             if (!Constants.reset) {
-                super.getWalk().calculate(createArray(Constants.currentFootStateLeft), Constants.l1, super.getSide(), 15);
+                super.getWalk().calculate(createArray(Constants.currentFootStateLeft), Constants.l1, super.getSide(), 50);
                 System.out.println("Left foot: " + timing());
                 Thread.sleep(2000);
                 
-                super.getWalk().calculate(createArray(Constants.currentFootStateLeft), Constants.l2, super.getSide(), 25);
+                super.getWalk().calculate(createArray(Constants.currentFootStateLeft), Constants.l2, super.getSide(), 50);
                 System.out.println("Left foot: " + timing());
                 Thread.sleep(1000);
-                super.getWalk().calculate(createArray(Constants.currentFootStateLeft), Constants.l21, super.getSide(), 15);
+                super.getWalk().calculate(createArray(Constants.currentFootStateLeft), Constants.l21, super.getSide(), 50);
                 System.out.println("Left foot: " + timing());
                 Thread.sleep(1500);
                 super.getWalk().calculate(createArray(Constants.currentFootStateLeft), Constants.l3, super.getSide(), 15);
@@ -64,8 +64,8 @@ public class LeftCalculator extends Calculator implements Runnable {
         }
     }
     public int[] createArray(AtomicIntegerArray at){
-        int[] current = new int[4];
-        for (int i = 0; i < 4; i++) {
+        int[] current = new int[5];
+        for (int i = 0; i < 5; i++) {
             current[i] = at.get(i);
         }
         return current;

@@ -52,8 +52,8 @@ public class Constants {
 
     public static volatile int[] footStateL = new int[]{40, 100, 20, 90, 100};
     public static volatile int[] footStateR = new int[]{40, 100, 20, 90, 90};
-    public static volatile AtomicIntegerArray currentFootStateRight = new AtomicIntegerArray(footStateR);
-    public static volatile AtomicIntegerArray currentFootStateLeft = new AtomicIntegerArray(footStateL);
+    public static AtomicIntegerArray currentFootStateRight = new AtomicIntegerArray(footStateR);
+    public static AtomicIntegerArray currentFootStateLeft = new AtomicIntegerArray(footStateL);
 
 
     // Gyroscope data

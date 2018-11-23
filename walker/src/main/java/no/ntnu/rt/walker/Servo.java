@@ -44,7 +44,7 @@ public class Servo implements Runnable {
             out.print("" + angle);
             out.flush();
             this.angle = angle;
-            //System.out.println("Angle of " + this.port + " is " + angle);
+            System.out.println("Angle of " + this.port + " is " + angle);
         }
     }
 
@@ -53,7 +53,7 @@ public class Servo implements Runnable {
         out.print("" + angle);
         out.flush();
         this.angle = angle;
-        //System.out.println("Angle of " + this.port + " is " + angle);
+        System.out.println("Angle of " + this.port + " is " + angle);
 
     }
 

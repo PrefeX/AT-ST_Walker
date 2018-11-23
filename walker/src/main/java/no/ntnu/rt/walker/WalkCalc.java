@@ -28,10 +28,10 @@ public class WalkCalc {
                 if (current[i] != stop[i]) {
                     if (current[i] > stop[i]) {
                         current[i] = current[i] - 1;
-                        //System.out.println("" + current[i] + "  " + stop[i]);
+                        System.out.println("" + current[i] + "  " + stop[i]);
                     } else if (current[i] < stop[i]) {
                         current[i] = current[i] + 1;
-                        //System.out.println("" + current[i] + "  " + stop[i]);
+                        System.out.println("" + current[i] + "  " + stop[i]);
                     }
 
                 }
