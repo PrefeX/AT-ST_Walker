@@ -80,12 +80,13 @@ public class Serial implements Runnable {
 
         // Wait so the connection can be established, send a message to start the slave and wait for it to initilize
         System.out.println("Waiting for connection, and sending the start command");
-        Thread.sleep(1000);
+        Thread.sleep(5000);
         serialPort.writeBytes("Start".getBytes()); //Write data to port
 
         while (true) {
             String transmissionString = serialPort.readString();
             if (transmissionString != null) {
+                //System.out.println(transmissionString);
                 if (transmissionString.startsWith("[") && transmissionString.endsWith("]")) {
                     //System.out.println(transmissionString);
                     parseInput(transmissionString);
