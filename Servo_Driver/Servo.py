@@ -30,17 +30,25 @@ class Servo(Thread):
         connection, address = s.accept()
         print("connected with " , address[0], ":", str(address[1]))
         while Constants.walking:
-
-            fromJava = connection.recv(3)
-            print(fromJava)
+#            try:
+                fromJava = connection.recv(3)
+                print(fromJava)
             
-            angleFromJava = int(fromJava)
+                angleFromJava = int(fromJava)
 
-            if ((angleFromJava >= 0) and (angleFromJava <=180)):
-                print(angleFromJava, "over port:" , self.port , " on channel " , self.channel, "....fml")
-                self.servo.angle = angleFromJava
-            else:
-                print("Angle is out of bounds? it is: ", angleFromJava)
+                if ((angleFromJava >= 0) and (angleFromJava <=180)):
+                    print(angleFromJava, "over port:" , self.port , " on channel " , self.channel, "....fml")
+                    self.servo.angle = angleFromJava
+                else:
+                    print("Angle is out of bounds? it is: ", angleFromJava)
+           # except:
+           #     print("connection closed?")
+            #    try:
+             #       s.close()
+              #  except:
+               #     print("something")
+                #connection, address = s.accept()
+                #print("connected with ", address[0], ":", str(address[1]))
 
 
 if __name__ == '__main__':
