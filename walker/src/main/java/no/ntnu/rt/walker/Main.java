@@ -15,7 +15,7 @@ public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
         //Walker walker = new Walker();
         //walker.walk();    
-        Serial serial = new Serial("/dev/tty0");
+        Serial serial = new Serial("/dev/ttyUSB0");
         Thread st = new Thread(serial);
         st.start();
         while (true) {            
