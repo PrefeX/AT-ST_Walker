@@ -14,7 +14,6 @@ public class Constants {
     public static boolean reset = false;
     public static boolean walking = true;
     public static boolean waitingForSync = false;
-    
 
     public static String serverAddress = "158.38.140.203";
     public static Integer[] leftFootPorts = new Integer[]{8011, 8012, 8013, 8014, 8015};
@@ -26,16 +25,16 @@ public class Constants {
     public static volatile Integer[] l1 = new Integer[]{40, 80, 20, 90, 100};
     public static volatile Integer[] r1 = new Integer[]{50, 80, 35, 90, 90};
 
-    public static volatile Integer[] l2 = new Integer[]{40, 80, 20, 55, 105};
+    public static volatile Integer[] l2 = new Integer[]{40, 80, 35, 55, 105};
     public static volatile Integer[] r2 = new Integer[]{50, 80, 35, 65, 90};
 
-    public static volatile Integer[] l21 = new Integer[]{40, 80, 15, 50, 105};
-    public static volatile Integer[] r21 = new Integer[]{50, 40, 80, 60, 100};
+    public static volatile Integer[] l21 = new Integer[]{40, 80, 35, 55, 105};
+    public static volatile Integer[] r21 = new Integer[]{50, 40, 80, 65, 100};
 
-    public static volatile Integer[] l3 = new Integer[]{40, 80, 15, 90, 110};
-    public static volatile Integer[] r3 = new Integer[]{50, 100, 55, 90, 70};
+    public static volatile Integer[] l3 = new Integer[]{40, 80, 35, 90, 110};
+    public static volatile Integer[] r3 = new Integer[]{50, 100, 55, 65, 70};
 
-    public static volatile Integer[] l31 = new Integer[]{40, 80, 25, 100, 100};
+    public static volatile Integer[] l31 = new Integer[]{40, 80, 35, 100, 100};
     public static volatile Integer[] r31 = new Integer[]{50, 100, 65, 50, 70};
 
     public static volatile Integer[] l4 = new Integer[]{40, 80, 55, 90, 120};
@@ -55,7 +54,6 @@ public class Constants {
 
     public static volatile Integer[] currentFootStateLeft = new Integer[]{40, 80, 20, 90, 100};
     public static volatile Integer[] currentFootStateRight = new Integer[]{50, 80, 20, 90, 90};
-
     // Gyroscope data
     public static volatile float[] gyro = new float[]{0, 0, 0};
 
