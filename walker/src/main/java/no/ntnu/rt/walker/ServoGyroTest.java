@@ -76,11 +76,11 @@ public class ServoGyroTest implements Runnable {
                 move(RightFoot.angles.get(servoNumber));
 
             }
-            try {
-                Thread.sleep(20);
-            } catch (InterruptedException ex) {
-                Logger.getLogger(ServoGyroTest.class.getName()).log(Level.SEVERE, null, ex);
-            }
+//            try {
+//                Thread.sleep(10);
+//            } catch (InterruptedException ex) {
+//                Logger.getLogger(ServoGyroTest.class.getName()).log(Level.SEVERE, null, ex);
+//            }
         }
     }
 
