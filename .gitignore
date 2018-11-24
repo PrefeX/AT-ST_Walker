@@ -1,1 +1,6 @@
-/walker/target/
+/walker/target/classes/
+/walker/target/generated-sources/
+/walker/target/surefire/
+/walker/target/maven-archiver/
+/walker/target/test-classes/
+

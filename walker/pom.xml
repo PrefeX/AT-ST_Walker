@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>ntnu.rt</groupId>
     <artifactId>walker</artifactId>
-    <version>1.0-SNAPSHOTFDS</version>
+    <version>1.0-SNAPSHOTFDSAS</version>
 
     <packaging>jar</packaging>
     <properties>

@@ -13,8 +13,15 @@ import java.io.IOException;
  */
 public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
-        Walker walker = new Walker();
-        walker.walk();    
+        //Walker walker = new Walker();
+        //walker.walk();    
+        Serial serial = new Serial("/dev/tty0");
+        Thread st = new Thread(serial);
+        st.start();
+        while (true) {            
+            Thread.sleep(1000);
+            System.out.println(Constants.gyro[0]);
+        }
     }
     
 }
