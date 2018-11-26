@@ -13,6 +13,7 @@ import java.io.IOException;
  */
 public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
+        
         Process execPython = Runtime.getRuntime()
                 .exec("python3 /home/pi/AT-ST_Walker/Servo_Driver/Servo.py");
         Thread.sleep(2000);
