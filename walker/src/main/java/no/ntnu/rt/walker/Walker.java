@@ -18,7 +18,7 @@ class Walker {
     private final RightFoot right;
     Thread leftFoot;
     Thread rightFoot;
-    Serial serial;
+    //Serial serial;
     Thread serialThread;
     WalkCalc walkCalc;
     private Synchronizer sync;
@@ -29,8 +29,8 @@ class Walker {
         right = new RightFoot("right", sync);
         leftFoot = new Thread(left);
         rightFoot = new Thread(right);
-        serial = new Serial("COM1");
-        serialThread = new Thread(serial);
+        //serial = new Serial("COM1");
+        //serialThread = new Thread(serial);
         //serialThread.start();
         walkCalc = new WalkCalc();
 
