@@ -27,7 +27,7 @@ public class LeftCalculator extends Calculator implements Runnable {
         try {
             if (!Constants.reset) {
                 Thread.sleep(2000);
-                while (Constants.walking) {
+                //while (Constants.walking) {
 
                     super.getWalk().calculate(Constants.currentFootStateLeft, Constants.l1, super.getSide(), 15);
                     System.out.println("Left foot: " + timing());
@@ -62,7 +62,7 @@ public class LeftCalculator extends Calculator implements Runnable {
                     Thread.sleep(1000);
                     Constants.currentFootStateLeft = Constants.startValuesL;
                     Thread.sleep(10000);
-                }
+               // }
 
                 //Thread.sleep(5000);
                 //super.getWalk().calculate(Constants.currentFootStateLeft, Constants.startValuesL, super.getSide(), 25);

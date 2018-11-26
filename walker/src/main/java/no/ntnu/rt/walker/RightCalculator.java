@@ -25,7 +25,7 @@ public class RightCalculator extends Calculator implements Runnable {
     public void walkingPattern() {
         try {
             if (!Constants.reset) {
-                while (Constants.walking) {
+               // while (Constants.walking) {
 
                     Thread.sleep(3000);
                     super.getWalk().calculate(Constants.currentFootStateRight, Constants.r1, super.getSide(), 10);
@@ -62,7 +62,7 @@ public class RightCalculator extends Calculator implements Runnable {
                     Thread.sleep(1000);
                     Constants.currentFootStateRight = Constants.startValuesR;
                     Thread.sleep(10000);
-                }
+                //}
 
                 //Thread.sleep(5000);
                 //super.getWalk().calculate(Constants.currentFootStateRight, Constants.startValuesR, super.getSide(), 25);
